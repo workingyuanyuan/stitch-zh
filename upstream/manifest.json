@@ -1,0 +1,227 @@
+{
+	"origin": "https://app-companion-430619.appspot.com",
+	"index": "/docs/llms.txt",
+	"read": "2026-11-20",
+	"pages": {
+		"/docs/blueprints/dashboards.md": {
+			"sha256": "8e877c6f10e2a94c687497d7fdffec461788beefec22d7380cdcc0738a96ede6",
+			"characters": 26
+		},
+		"/docs/blueprints/github-landing.md": {
+			"sha256": "81d7b81b437644e9b3aecb5a4092cd0d5c0382c35e6706794dc7c286bf925ac8",
+			"characters": 36
+		},
+		"/docs/build/backend.md": {
+			"sha256": "5d73b501b45821176bd2e1744e67d88042bda515a2743c93a9f46afde6d6e24e",
+			"characters": 23
+		},
+		"/docs/build/code.md": {
+			"sha256": "40fa70f52a9319bd6c574b238d235bdec9765e136e141c821fcaec8136cf6268",
+			"characters": 20
+		},
+		"/docs/build/deploy.md": {
+			"sha256": "eb97ddb49243a7ccf8081e985a0b2b15e05d45451312584a60b7fc105b0b8856",
+			"characters": 22
+		},
+		"/docs/cli/agent-bridge.md": {
+			"sha256": "8e24674d6abfcf7217b216921c744c9e412fa0a69affa39cbdd6e3b85b334053",
+			"characters": 8743
+		},
+		"/docs/cli/capture-and-upload.md": {
+			"sha256": "2441ced097a1c04b8bd1b8e222ca281ef84f517d233f1c912f9cac5e801037b9",
+			"characters": 4500
+		},
+		"/docs/cli/codebase-prototyping.md": {
+			"sha256": "ff60b7c5b5409545f53d5db0c68fdd3b1942314f8ebecdcafb7f681793aaf019",
+			"characters": 3282
+		},
+		"/docs/cli/design-review.md": {
+			"sha256": "d863df8ad58f3ebc966dc9f47d5bff4725e0f45e58a8cac4fd67ccc964dff249",
+			"characters": 3130
+		},
+		"/docs/cli/design-systems.md": {
+			"sha256": "fae731cf34d650a070d3f98f52d4edb806396cff14b42498d4e750e51b2ad818",
+			"characters": 3360
+		},
+		"/docs/cli/mcp-and-skills.md": {
+			"sha256": "4a42ca03122e18d521d2b13eda44cc1c6c299d2612aa4ab8b11b6aefdbad0102",
+			"characters": 3832
+		},
+		"/docs/cli/overview.md": {
+			"sha256": "a6c3173ad8d9697ba7b5f6a3a6e791f66154a6a1f63b7c2252e02e3e1b58f316",
+			"characters": 3897
+		},
+		"/docs/cli/priorities-and-context.md": {
+			"sha256": "a25949d71e75a8d44d8e25314e83366a6e7b17ba7b9c7b36c8d537d68bc286f5",
+			"characters": 4186
+		},
+		"/docs/cli/reference/commands.md": {
+			"sha256": "3ad2c09f39c2fcdee7086c171af6a58d3aef7b0c8c1e8ae5821580ce9abbb8bc",
+			"characters": 38602
+		},
+		"/docs/cli/reference/mcp-tools.md": {
+			"sha256": "00ccd5ba9b31ca94ee52b6ce3d7ee98cafe5c51f21fb1b420e35efd94873b324",
+			"characters": 26164
+		},
+		"/docs/cli/reference/rest-api.md": {
+			"sha256": "874d20768ba01c547c67083e0e8a846f5c559b46b77989c53c4bd97b37899cc2",
+			"characters": 61198
+		},
+		"/docs/cli/screens-and-variants.md": {
+			"sha256": "dbff4500459c6e80c74479c122538cceabfde2de35ba15f29ae7d583ca5c215f",
+			"characters": 4204
+		},
+		"/docs/cli/workspaces-and-projects.md": {
+			"sha256": "11d2f59c1c9c01d657f4b8a167bce559f75461ce280f895e0880bb79ffc0675b",
+			"characters": 3920
+		},
+		"/docs/design-md/cli.md": {
+			"sha256": "1f8741e8a28cec90d965c65853927bda800fedf65780f4fbd68fce38b4a7d6d6",
+			"characters": 4237
+		},
+		"/docs/design-md/format.md": {
+			"sha256": "397220c82c80e49d4673f0997cb1fdd028a1b0a3cb2b9e17e701bb0f3624ecef",
+			"characters": 128
+		},
+		"/docs/design-md/get-instructions.md": {
+			"sha256": "a4db02568a5f3fe98b972270250ecdd0a7d9b5c50e027bba11ac9a7d13c79b68",
+			"characters": 6405
+		},
+		"/docs/design-md/linting-rules.md": {
+			"sha256": "f3110c55dd3777fa5010f429b3c26e2d09a5e3047c0d7c0c5bbd52db0877740e",
+			"characters": 5656
+		},
+		"/docs/design-md/overview.md": {
+			"sha256": "576d06cf8decc7f5f7a4ca330279f270cb4652a8e67ffd59db9d75ae5e08008b",
+			"characters": 4613
+		},
+		"/docs/design-md/specification.md": {
+			"sha256": "14305f4536e54e1d6f7906dc6aa883a9db2bc4d36c21f7bd7d9ed99503c2a21a",
+			"characters": 11016
+		},
+		"/docs/design-md/usage.md": {
+			"sha256": "86d6b019fca572085ca3729e8c0684768d1d8e9562dbf5ecdd06d8d500cc8612",
+			"characters": 1844
+		},
+		"/docs/index.md": {
+			"sha256": "312fe35356d907934169f95ecf6cb51860b36f31b12d0f4431ff473163b96abd",
+			"characters": 5665
+		},
+		"/docs/learn/controls.md": {
+			"sha256": "5445cc099352087eba6b7cb31887782d79eb89dff0ae2b40d4bcdf1137af943c",
+			"characters": 6366
+		},
+		"/docs/learn/design-modes.md": {
+			"sha256": "188cb4b443bc84d707d2c4d7dba1589a35f7ab53b7e728ea6f4d3d239abbd598",
+			"characters": 3890
+		},
+		"/docs/learn/device-types.md": {
+			"sha256": "bbe31961bc4152cd90b5cd8aeab502d58bb0fb8732822408d0dd7b0a0773b3bc",
+			"characters": 4452
+		},
+		"/docs/learn/edit-theme.md": {
+			"sha256": "6c2ee52b06ec733d3adc04235f0247572caa30e663ee8e6a01e33b89c1ee392d",
+			"characters": 26
+		},
+		"/docs/learn/overview.md": {
+			"sha256": "a3136985f825d96dab97884186ca238ed6b5646135d54ccd3f7f3b8a71ea2ecb",
+			"characters": 5056
+		},
+		"/docs/learn/prompting.md": {
+			"sha256": "179318746152ff64103b34105e6c9ce1ee06b2b94144696224a1dfc6297f10ad",
+			"characters": 4162
+		},
+		"/docs/learn/prototypes.md": {
+			"sha256": "47869803017ce013ef087d0fba3199c351876e411eed4da94a02a4c23a969b6b",
+			"characters": 26
+		},
+		"/docs/learn/variants.md": {
+			"sha256": "a95bdf53abf55430d23b25f5e95381b6eb81b8dbd7e931bf4225230e1675e6a6",
+			"characters": 2790
+		},
+		"/docs/mcp/guide.md": {
+			"sha256": "4d628d91ff5be5af3fd24811749b7b3da553cca684c3df9addf23db94e4880d3",
+			"characters": 4477
+		},
+		"/docs/mcp/reference.md": {
+			"sha256": "b9d71f5cb3bdd8fb72671cf977c7b81282696a8168d4761f65d217bb903c7fb8",
+			"characters": 27126
+		},
+		"/docs/mcp/setup.md": {
+			"sha256": "9396a1b92a16c53be139d46592c1426647995f273d9999b406a54e4996120008",
+			"characters": 12262
+		},
+		"/docs/sdk/agent-workflows.md": {
+			"sha256": "fd1e832caab5821041bec28fdbb0fd6106c4bbf87dd7c821fcbcac00bf1cb05b",
+			"characters": 2822
+		},
+		"/docs/sdk/ai-sdk.md": {
+			"sha256": "0706a2a415402273c9239a5d230de720df5c29398e30e1e009f046313f8bd8b4",
+			"characters": 1855
+		},
+		"/docs/sdk/architecture.md": {
+			"sha256": "5b02d1ea9a6266f92e9feda5e9e4767d7d289e35bca521a2fb1bb9ae063b5498",
+			"characters": 3811
+		},
+		"/docs/sdk/design-md.md": {
+			"sha256": "b21a29dc185e9b333aba0c5a4db8e2efecca3bf97cbfb6618dd58a75ce521130",
+			"characters": 3403
+		},
+		"/docs/sdk/design-systems.md": {
+			"sha256": "9d1a8b10aaf78b50917f2b8fd27b198db018d8d54076f1a8a718445708b60664",
+			"characters": 3332
+		},
+		"/docs/sdk/download-artifacts.md": {
+			"sha256": "bcad574d106e9bdbbd36984a87d0176a7bf0c225ca14556f1715fa4e4f9214f2",
+			"characters": 1671
+		},
+		"/docs/sdk/edit-screen.md": {
+			"sha256": "71a434d73b50aa0f1bfd66e556db7393540dfb7249131291fcf3daae191cfe76",
+			"characters": 1378
+		},
+		"/docs/sdk/extract-themes.md": {
+			"sha256": "40691d30821964d2c2b74c3ac0a6ed67c7f4a24416f9ace1010d9998327a5232",
+			"characters": 2042
+		},
+		"/docs/sdk/generate-variants.md": {
+			"sha256": "a1a4fff0bfe4ef22586cf5eb56de071f0491f001b54936e46ace8d71f2ae3f54",
+			"characters": 1513
+		},
+		"/docs/sdk/reference.md": {
+			"sha256": "b0b3fa64b6f685f989d79f7cf09c2229f87f411fc343acce73c01574e3dffd29",
+			"characters": 8315
+		},
+		"/docs/sdk/tutorial.md": {
+			"sha256": "fd64fe7f899873c24378fad2537934f30ad302219762d086413a1ce3feabb88f",
+			"characters": 3005
+		},
+		"/docs/sdk/upload-image.md": {
+			"sha256": "c8153875685aafed7c84d392ec7edbcba56fe1bf88dea0d49afdf4511b1b2a95",
+			"characters": 2748
+		},
+		"/docs/skills/build-in-a-loop.md": {
+			"sha256": "6befa84a0af07e46b3ed353a26964c076bf1b25d179ae9d595201d62fc37614a",
+			"characters": 3506
+		},
+		"/docs/skills/get-started.md": {
+			"sha256": "d7cf45c06414e82536e3d812d9193426e802f49d49414b0353277cfe43d9978b",
+			"characters": 4070
+		},
+		"/docs/skills/reference.md": {
+			"sha256": "2b7a811b9e87c4da53898595e59f7cd3f725d89fdf2cc0773b374770c634a14b",
+			"characters": 4825
+		},
+		"/docs/skills/roundtrip.md": {
+			"sha256": "56c7c301bf51768bae77c942986935553fe1d79ebc551d2087ba313fe14464f5",
+			"characters": 4332
+		},
+		"/docs/skills/taste.md": {
+			"sha256": "800a06a61f5e1719a64e37036db91c05a5ed18e42f5b2cfd85e542368830835e",
+			"characters": 4448
+		},
+		"/docs/skills/walkthrough-videos.md": {
+			"sha256": "3f607a24cc4264da7e08d34bd4bda009a792b339395da90929a74ad50b75b3bd",
+			"characters": 2854
+		}
+	}
+}

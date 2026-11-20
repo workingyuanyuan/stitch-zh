@@ -1,0 +1,12 @@
+[
+{"id":"q11","answer":"npm 套件 @google/stitch 的 README 只說明 `stitch login` 會在瀏覽器開啟 Google OAuth；對無瀏覽器環境沒有專門說明。README 列出的替代憑證是環境變數 STITCH_API_KEY（旗標 --api-key）或 STITCH_ACCESS_TOKEN（旗標 --access-token）。限制：某些 Canvas 操作即使 OAuth 登入仍需要 STITCH_API_KEY，否則出現 MISSING_CANVAS_CREDENTIALS。官方文件頁面本身抓不到內容，CI 專屬做法為 not found（此題用了 4 次 fetch，超過預算）。","source_url":"https://unpkg.com/@google/stitch@0.13.0/README.md","fetches":4},
+{"id":"q12","answer":"not found","source_url":"","fetches":3},
+{"id":"q13","answer":"not found","source_url":"","fetches":3},
+{"id":"q14","answer":"not found（SDK README 只說明 StitchError 與錯誤碼，含 NETWORK_ERROR，但沒有說 generate_screen_from_text 連線錯誤是否應重試）","source_url":"https://github.com/google-labs-code/stitch-sdk","fetches":2},
+{"id":"q15","answer":"SDK README 的參數名稱是 variantCount（不是 numVariants）：範圍 1–5，預設 3。另外 creativeRange 預設 EXPLORE，aspects 預設全部。CLI 的 --count 同樣是 1–5。","source_url":"https://github.com/google-labs-code/stitch-sdk","fetches":0},
+{"id":"q16","answer":"not found（SDK README 沒有 upload() 方法；只有 CLI 的 stitch upload screen/design 指令）","source_url":"","fetches":0},
+{"id":"q17","answer":"11 條規則中只有 broken-ref 的嚴重度是 error（未解析的 token 參照、未知的元件子 token、損壞或超出範圍的外部 @ 參照）；其餘為 warning 或 info。規則：lint 發現 error 時結束碼為 1，否則 0。","source_url":"https://raw.githubusercontent.com/google-labs-code/design.md/main/README.md","fetches":3},
+{"id":"q18","answer":"規格未定義的章節標題（如 ## Iconography）：保留，不報錯。同一章節標題出現兩次：視為錯誤，整個檔案被拒絕。","source_url":"https://raw.githubusercontent.com/google-labs-code/design.md/main/README.md","fetches":0},
+{"id":"q19","answer":"還需要設定 Stitch MCP 伺服器：技能需要 Stitch MCP 已設定並在代理環境中運作，要依 Stitch MCP 設定說明註冊伺服器並設定環境變數與憑證。另外，選擇性安裝技能時，技能之間常有相依性，要一併安裝所需的相依技能。","source_url":"https://raw.githubusercontent.com/google-labs-code/stitch-skills/main/README.md","fetches":1},
+{"id":"q20","answer":"用 `stitch mcp start` 啟動（透過 stdio；套件也提供 `stitch-mcp` 執行檔，等同 `stitch mcp start`）；`stitch mcp install` 可註冊到 AI 編輯器。工具數量：not found（README 未寫明）。","source_url":"https://unpkg.com/@google/stitch@0.13.0/README.md","fetches":3}
+]

@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q01",
+  "answer": "一次可產生一到五個選項（2026-11-20 的上限）。產生時要指定 Creative Range（變化幅度）：Refined（低，保留結構，只調字體、間距、顏色）或 Creative（高，可完全重排版面、換圖片、翻新主題）。提示詞仍要寫明方向。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/learn/variants/",
+  "fetches": 2
+ },
+ {
+  "id": "q02",
+  "answer": "按 ⌘←（Mac）或 Ctrl+←（Windows/Linux）跳到最近的畫面，或按 0 縮小到看得見整個專案（Fit to View）。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/learn/controls/",
+  "fetches": 1
+ },
+ {
+  "id": "q03",
+  "answer": "不能直接拿到。Stitch 下載的是圖片與 HTML 程式碼（zip）；要 React、Vue、Flutter、SwiftUI 等格式，需把 HTML 和參考圖交給 LLM 轉換。Build 頁面（Code、Backend、Deploy）在 2026-11-20 只有 Coming soon。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/learn/overview/",
+  "fetches": 1
+ },
+ {
+  "id": "q04",
+  "answer": "Redesign (Nano Banana Pro)：適合翻新舊 App、風格實驗；把過時介面套上指定設計美學，提示詞有明確美術指導關鍵字（如 Editorial、Glassmorphism）時表現最好。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/learn/design-modes/",
+  "fetches": 1
+ },
+ {
+  "id": "q05",
+  "answer": "專案會一直產生建立時所選裝置尺寸的畫面，網頁內容會被放進 App 的外框（可能被裁掉）。處理：用 Preview > Device Type 切到 Desktop 並手動拉大外框高度（常常其餘版面已產生只是看不到）；或下載畫面當參考圖，建立 Web 模式新專案（或在原專案用更新提示詞並附參考圖），提示詞說明導覽、主視覺區塊、網格密度如何為大螢幕改變。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/learn/device-types/",
+  "fetches": 1
+ },
+ {
+  "id": "q06",
+  "answer": "按一下 H 是切換到平移工具，直到再切換為止；按住 Space 只是在任何工具下暫時變成平移，放開後回到原本的工具。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/learn/controls/",
+  "fetches": 0
+ },
+ {
+  "id": "q07",
+  "answer": "每個提示詞只針對一個畫面或元件，做一到兩項調整（一次只做一項主要修改）。例外是 Variations，適合一次做大幅改動（主題和版面可寫在同一個提示詞），但仍要寫明方向。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/learn/prompting/",
+  "fetches": 1
+ },
+ {
+  "id": "q08",
+  "answer": "用一個提示詞即可，例如：Translate every product description and button label in the app into Traditional Chinese.（文件範例是換成西班牙文。）",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/learn/prompting/",
+  "fetches": 0
+ },
+ {
+  "id": "q09",
+  "answer": "Fast：為相容性最佳化，適合快速畫線框稿、把初稿直接匯出到 Figma 再手動修飾。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/learn/design-modes/",
+  "fetches": 0
+ },
+ {
+  "id": "q10",
+  "answer": "用 Edit Theme：選取畫面，按 Generate，再按 Edit Theme，可調整淺色/深色外觀、強調色、元件圓角大小、字體。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/learn/overview/",
+  "fetches": 0
+ },
+ {
+  "id": "q11",
+  "answer": "用環境變數 STITCH_API_KEY，或把 API key 存進全域設定：stitch config set apiKey \"your_api_key_here\" --global（stitch login 需要瀏覽器，用於有瀏覽器的電腦）。可用 stitch status 查看登入狀態。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/cli/overview/",
+  "fetches": 1
+ },
+ {
+  "id": "q12",
+  "answer": "用上一次 stitch edit screen 回傳的新畫面 ID。每次修改都存成新畫面並回傳新 ID，下一次要傳這個新 ID 才會接著最新版本改。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/cli/screens-and-variants/",
+  "fetches": 1
+ },
+ {
+  "id": "q13",
+  "answer": "約一小時（通常一小時）就過期。過期或回報 Unauthenticated 時，重新執行產生權杖的指令更新 .env，再手動把新的 STITCH_ACCESS_TOKEN 複製到 MCP 用戶端設定檔的 Authorization 標頭（多數用戶端不會自動讀 .env）。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/mcp/setup/",
+  "fetches": 1
+ },
+ {
+  "id": "q14",
+  "answer": "不應重試。連線錯誤不一定代表失敗，且每次呼叫都建立新畫面，重試可能產生重複畫面；應過幾分鐘改用 get_screen 查看（產生通常要幾分鐘）。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/mcp/reference/",
+  "fetches": 1
+ },
+ {
+  "id": "q15",
+  "answer": "已發布套件（0.3.5、0.4.0）叫 variantCount；可設 1 到 5，預設 3。Stitch 文件寫的 numVariants 不在套件型別裡。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/sdk/generate-variants/",
+  "fetches": 1
+ },
+ {
+  "id": "q16",
+  "answer": "依已發布套件（0.3.5 與 0.4.0）型別宣告，project.upload() 回傳建立的 Screen 陣列（Stitch 文件則說回傳含 success 的結果物件，與套件不符）。失敗時套件 README 說丟出 StitchError，用 try/catch 接住並讀 e.code 與 e.message（錯誤碼如 FILE_NOT_FOUND、UNSUPPORTED_FORMAT、AUTH_FAILED、UPLOAD_FAILED、UNKNOWN_ERROR）。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/sdk/upload-image/",
+  "fetches": 1
+ },
+ {
+  "id": "q17",
+  "answer": "只有 broken-ref 是 error，會讓 lint 以結束碼 1 結束（無法解析的 token 參照、未知的元件 sub-token）；其餘規則是 warning 或 info。Stitch 文件列 8 條規則，儲存庫 README 列 11 條，兩邊都只有 broken-ref 是 error。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/design-md/linting-rules/",
+  "fetches": 1
+ },
+ {
+  "id": "q18",
+  "answer": "未知的章節標題（如 ## Iconography）會保留，不報錯。重複的章節標題（如兩個 ## Colors）是錯誤，拒絕整個檔案。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/design-md/specification/",
+  "fetches": 2
+ },
+ {
+  "id": "q19",
+  "answer": "還需要另外註冊 Stitch MCP 伺服器並設定 API 憑證（API key），Skill 才連得上 Stitch（Skill 透過 MCP 伺服器和 Stitch 溝通），並可用 Check my Stitch account... 確認連線。裝好後若看不到 Skill，要重新啟動 agent 工作階段。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/skills/get-started/",
+  "fetches": 1
+ },
+ {
+  "id": "q20",
+  "answer": "執行 stitch mcp start（本機執行，透過 stdio；MCP client 設定 command: stitch, args: [mcp, start]；可用 stitch mcp install 註冊到編輯器）。提供七個工具：stitch_find、stitch_get、stitch_create、stitch_edit、stitch_generate、stitch_delete、stitch_url。",
+  "source_url": "http://127.0.0.1:4401/stitch-zh/cli/mcp-and-skills/",
+  "fetches": 1
+ }
+]

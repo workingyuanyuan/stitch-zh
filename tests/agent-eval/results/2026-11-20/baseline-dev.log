@@ -1,0 +1,19 @@
+{"q":"q11","url":"https://stitch.google.com/docs/","start":0,"status":200,"type":"text/html; charset=utf-8","total":0}
+{"q":"q11","url":"https://stitch.google.com/llms.txt","start":0,"status":200,"type":"text/plain; charset=utf-8","total":3091}
+{"q":"q11","url":"https://stitch.google.com/docs/llms.txt","start":0,"status":200,"type":"text/html; charset=utf-8","total":0}
+{"q":"q11","url":"https://github.com/google-labs-code/stitch-sdk","start":0,"status":200,"type":"text/html; charset=utf-8","total":13182}
+{"q":"q12","url":"https://github.com/google-labs-code/stitch-cli","start":0,"status":404,"type":"text/html; charset=utf-8","total":79070}
+{"q":"q12","url":"https://registry.npmjs.org/@google/stitch","start":0,"status":200,"type":"application/json","total":46236}
+{"q":"q12","url":"https://raw.githubusercontent.com/google-labs-code/stitch-sdk/main/llms.txt","start":0,"status":404,"type":"text/plain; charset=utf-8","total":14}
+{"q":"q13","url":"https://stitch.withgoogle.com/docs/mcp/setup","start":0,"status":200,"type":"text/html; charset=utf-8","total":0}
+{"q":"q13","url":"https://stitch.withgoogle.com/docs/sitemap.xml","start":0,"status":200,"type":"text/html; charset=utf-8","total":0}
+{"q":"q13","url":"https://stitch.withgoogle.com/llms.txt","start":0,"status":200,"type":"text/plain; charset=utf-8","total":3091}
+{"q":"q14","url":"https://github.com/google-labs-code/stitch-sdk","start":5000,"status":200,"type":"text/html; charset=utf-8","total":13182}
+{"q":"q14","url":"https://github.com/google-labs-code/stitch-sdk","start":10000,"status":200,"type":"text/html; charset=utf-8","total":13182}
+{"q":"q17","url":"https://raw.githubusercontent.com/google-labs-code/design.md/main/README.md","start":0,"status":200,"type":"text/plain; charset=utf-8","total":14866}
+{"q":"q17","url":"https://raw.githubusercontent.com/google-labs-code/design.md/main/README.md","start":5000,"status":200,"type":"text/plain; charset=utf-8","total":14866}
+{"q":"q17","url":"https://raw.githubusercontent.com/google-labs-code/design.md/main/README.md","start":10000,"status":200,"type":"text/plain; charset=utf-8","total":14866}
+{"q":"q19","url":"https://raw.githubusercontent.com/google-labs-code/stitch-skills/main/README.md","start":0,"status":200,"type":"text/plain; charset=utf-8","total":11129}
+{"q":"q20","url":"https://unpkg.com/@google/stitch@0.13.0/README.md","start":0,"status":200,"type":"text/markdown; charset=utf-8","total":13022}
+{"q":"q20","url":"https://unpkg.com/@google/stitch@0.13.0/README.md","start":5000,"status":200,"type":"text/markdown; charset=utf-8","total":13022}
+{"q":"q20","url":"https://unpkg.com/@google/stitch@0.13.0/README.md","start":10000,"status":200,"type":"text/markdown; charset=utf-8","total":13022}

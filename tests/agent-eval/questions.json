@@ -1,0 +1,146 @@
+{
+  "about": "Pilot questions for the agent test. Each was written from the official Stitch documentation as read on 2026-11-20 (cache/upstream-html/), not from this site, and for q15 and q16 from the published package files (cache/packages/), which contradict the docs page: q01 to q10 from the \"Stitch\" tab, q11 to q20 from the CLI, MCP, SDK, DESIGN.md and Agent Skills tabs. An answer passes only if it gives the expected answer AND the qualifier, and cites a page that supports them.",
+  "budget": "At most 3 fetches per question, starting from the start URL.",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "Stitch 的 Variations 一次可以產生幾個設計選項？產生時要另外設定什麼？",
+      "answer": "一次一到五個選項。每次產生都要指定 Creative Range。",
+      "qualifier": "Creative Range 有 Refined（低，保留結構，只調字體、間距、顏色）和 Creative（高，可以重排版面、換圖、翻新主題）兩種。",
+      "page": "learn/variants"
+    },
+    {
+      "id": "q02",
+      "question": "在 Stitch 的畫布上找不到自己的畫面了，按什麼鍵可以回去？",
+      "answer": "按 ⌘←（Mac）或 Ctrl+←（Windows/Linux）跳到最近的畫面。",
+      "qualifier": "也可以按 0（或 ⌘1 / Ctrl+1）縮小到顯示整個專案。",
+      "page": "learn/controls"
+    },
+    {
+      "id": "q03",
+      "question": "從 Stitch 下載設計，可以直接拿到 React 元件嗎？",
+      "answer": "不能直接拿到。下載的是一個 zip 檔，內容是設計的圖片和 HTML 程式碼。",
+      "qualifier": "React、Vue、Flutter、SwiftUI 等格式要另外用 LLM 從 HTML 和參考圖轉換。",
+      "page": "learn/overview"
+    },
+    {
+      "id": "q04",
+      "question": "我想把一個舊 App 的介面翻新成某種設計風格，Stitch 的哪一個 Design Mode 最適合？",
+      "answer": "Redesign (Nano Banana Pro)。",
+      "qualifier": "要寫明確的風格關鍵字（例如 Bento Grid、Glassmorphism），效果比籠統的要求好；或：模式名稱帶模型版本，是 2026-11-20 官方文件的名稱。",
+      "page": "learn/design-modes"
+    },
+    {
+      "id": "q05",
+      "question": "我在 Stitch 的 App 專案裡下了一個要做桌機網站的提示詞，結果會怎樣？要怎麼處理？",
+      "answer": "專案會一直產生建立時所選裝置尺寸的畫面，所以網頁內容會被放進 App 的外框。",
+      "qualifier": "用 Preview > Device Type 把檢視切換到目標裝置，再手動調整外框；把外框高度往下拉長，可以看到被藏住的其餘版面。",
+      "page": "learn/device-types"
+    },
+    {
+      "id": "q06",
+      "question": "在 Stitch 畫布上，按住 Space 和點一下 H 有什麼不同？",
+      "answer": "兩者都是平移。點一下 H 是切換到平移工具，會一直停在那個工具；按住 Space 只在按住期間暫時平移。",
+      "qualifier": "放開 Space 後回到原本的工具；按住 Z 同樣是暫時縮放。",
+      "page": "learn/controls"
+    },
+    {
+      "id": "q07",
+      "question": "用提示詞修改 Stitch 的設計時，一個提示詞應該改多少東西？有例外嗎？",
+      "answer": "一個提示詞只針對一個畫面或元件，做一到兩項調整（一次一項主要修改）。",
+      "qualifier": "例外是 Variations：因為會產生多個選項供挑選，適合一次做大幅改動。",
+      "page": "learn/prompting"
+    },
+    {
+      "id": "q08",
+      "question": "怎麼把 Stitch 設計裡的商品文案和按鈕文字一次換成另一種語言？",
+      "answer": "寫一個提示詞，要求把所有商品文案和按鈕文字換成目標語言（官方範例：Switch all product copy and button text to Spanish.）。",
+      "qualifier": "官方文件的範例是換成 Spanish。",
+      "page": "learn/prompting"
+    },
+    {
+      "id": "q09",
+      "question": "我打算把 Stitch 的初稿匯出到 Figma 再手動修飾，應該選哪個 Design Mode？",
+      "answer": "Fast。",
+      "qualifier": "它是為相容性最佳化的模式，適合快速畫線框稿。",
+      "page": "learn/design-modes"
+    },
+    {
+      "id": "q10",
+      "question": "不寫提示詞，要怎麼在 Stitch 裡改設計的強調色和元件圓角？",
+      "answer": "選取畫面，按 Generate，再按 Edit Theme。",
+      "qualifier": "Edit Theme 可以調整四項：淺色或深色外觀、強調色、元件的圓角大小、字體。",
+      "page": "learn/overview"
+    },
+    {
+      "id": "q11",
+      "question": "在 CI 或沒有瀏覽器的環境裡，Stitch CLI 要怎麼登入？",
+      "answer": "設定環境變數 STITCH_API_KEY。",
+      "qualifier": "也可以把 API key 存進全域設定：stitch config set apiKey \"...\" --global；用 stitch status 查登入狀態。",
+      "page": "cli/overview"
+    },
+    {
+      "id": "q12",
+      "question": "用 stitch edit screen 修改畫面後，想接著再改一次，要用哪一個畫面 ID？",
+      "answer": "用上一次修改回傳的新畫面 ID。",
+      "qualifier": "每次修改都會把結果存成一個新畫面並回傳新的 ID，不是覆寫原本的畫面。",
+      "page": "cli/screens-and-variants"
+    },
+    {
+      "id": "q13",
+      "question": "用 OAuth 連接 Stitch MCP 時，access token 多久會過期？過期後要做什麼？",
+      "answer": "通常一小時。過期後要重新取得 access token。",
+      "qualifier": "要手動把新的 token 更新到設定檔的 Authorization 標頭。",
+      "page": "mcp/setup"
+    },
+    {
+      "id": "q14",
+      "question": "呼叫 Stitch MCP 的 generate_screen_from_text 時遇到連線錯誤，應該重試嗎？",
+      "answer": "不要重試。連線錯誤不一定代表失敗，過幾分鐘用 get_screen 查詢。",
+      "qualifier": "產生畫面通常要幾分鐘；每次呼叫都會建立新畫面，重試可能產生重複的畫面。",
+      "page": "mcp/reference"
+    },
+    {
+      "id": "q15",
+      "question": "用 Stitch SDK 產生變化版本時，控制數量的選項叫什麼名字？可以設多少、預設多少？",
+      "answer": "variantCount，可設 1 到 5，預設 3。",
+      "qualifier": "Stitch 文件頁面寫的是 numVariants，但已發布的套件（@google/stitch-sdk 0.3.5 與 0.4.0）型別宣告的是 variantCount。",
+      "page": "sdk/generate-variants"
+    },
+    {
+      "id": "q16",
+      "question": "呼叫 Stitch SDK 的 project.upload() 會回傳什麼？失敗時要怎麼處理？",
+      "answer": "已發布套件（0.3.5 與 0.4.0）的型別宣告是回傳 Screen 陣列（Promise<Screen[]>）。",
+      "qualifier": "Stitch 文件說 upload() 不丟例外、回傳含 success 的結果物件，和套件的宣告不同；套件的 README 說 domain 方法會丟 StitchError，所以用 try/catch。",
+      "page": "sdk/upload-image"
+    },
+    {
+      "id": "q17",
+      "question": "DESIGN.md 的 lint 規則裡，哪些會讓 lint 以結束碼 1 結束？",
+      "answer": "只有嚴重度是 error 的發現會讓結束碼為 1；規則中 broken-ref 是 error。",
+      "qualifier": "其他規則是 warning 或 info，結束碼仍是 0。",
+      "page": "design-md/linting-rules"
+    },
+    {
+      "id": "q18",
+      "question": "DESIGN.md 裡出現規格沒有定義的章節（例如 ## Iconography）會怎樣？同一個章節標題出現兩次呢？",
+      "answer": "未知的章節會被保留，不算錯誤。",
+      "qualifier": "同一個章節標題出現兩次（例如兩個 ## Colors）是錯誤，整個檔案會被拒絕。",
+      "page": "design-md/specification"
+    },
+    {
+      "id": "q19",
+      "question": "安裝 Stitch 的 Agent Skills 之後，還需要另外設定什麼才能用？",
+      "answer": "要設定 Stitch MCP 伺服器。",
+      "qualifier": "還需要 API key（Skill 是透過 Stitch MCP 伺服器操作 Stitch 的）。",
+      "page": "skills/get-started"
+    },
+    {
+      "id": "q20",
+      "question": "Stitch CLI 內建的 MCP 伺服器怎麼啟動？它提供幾個工具？",
+      "answer": "用 stitch mcp start 啟動，提供 7 個工具（名稱以 stitch_ 開頭）。",
+      "qualifier": "它和遠端 Stitch MCP 服務是不同的伺服器，工具清單不同（遠端服務的工具是 create_project、generate_screen_from_text 等）。",
+      "page": "cli/reference/mcp-tools"
+    }
+  ]
+}

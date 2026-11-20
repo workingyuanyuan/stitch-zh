@@ -1,0 +1,12 @@
+[
+{"id":"q01","answer":"not found","source_url":"","fetches":3},
+{"id":"q02","answer":"not found","source_url":"","fetches":2},
+{"id":"q03","answer":"not found（取得的頁面只提到 Stitch 能產生前端程式碼 HTML/CSS，沒有說明能否下載 React 元件）","source_url":"","fetches":1},
+{"id":"q04","answer":"not found","source_url":"","fetches":1},
+{"id":"q05","answer":"not found","source_url":"","fetches":1},
+{"id":"q06","answer":"not found","source_url":"","fetches":1},
+{"id":"q07","answer":"官方提示詞指南說，一次聚焦一個畫面或元件，每個提示詞只做一到兩項調整（One Major Change at a Time：一次一個主要變更，較容易看出影響並調整）。所取得的頁面前 5000 字元內沒有寫例外。","source_url":"https://discuss.ai.google.dev/t/stitch-prompt-guide/83844","fetches":0},
+{"id":"q08","answer":"使用提示詞，例如 \"Switch all product copy and button text to Spanish.\"（把所有商品文案和按鈕文字改成西班牙文），換成想要的語言即可。","source_url":"https://discuss.ai.google.dev/t/stitch-prompt-guide/83844","fetches":0},
+{"id":"q09","answer":"not found（只知道 Stitch 支援 Paste to Figma，沒有找到 Design Mode 的說明）","source_url":"","fetches":1},
+{"id":"q10","answer":"not found（指南只提供用提示詞改強調色與圓角的做法，沒有不寫提示詞的方法）","source_url":"https://discuss.ai.google.dev/t/stitch-prompt-guide/83844","fetches":0}
+]

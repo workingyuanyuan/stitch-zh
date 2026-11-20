@@ -1,0 +1,53 @@
+---
+// Override of Starlight's Sidebar: a box of section tabs above the page list, as on the
+// official docs. The route middleware (src/routeData.ts) has already cut the page list
+// down to the current section.
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+import { SECTIONS, LABELS, LOCALES, sectionPages, sectionOf, pageId, htmlPath, withBase } from '../lib/site.mjs';
+
+const current = sectionOf(pageId(Astro.locals.starlightRoute.entry.id)) ?? SECTIONS[0];
+const t = LABELS[LOCALES[0].lang];
+---
+
+<nav class="section-tabs" aria-label={t.sections}>
+	{
+		SECTIONS.map((section) => (
+			<a href={withBase(htmlPath(sectionPages(section)[0]))} aria-current={section === current ? 'true' : undefined}>
+				{section.label}
+			</a>
+		))
+	}
+</nav>
+<Default><slot /></Default>
+
+<style>
+	.section-tabs {
+		display: flex;
+		flex-direction: column;
+		gap: 0.125rem;
+		margin-bottom: 1.5rem;
+		border: 1px solid var(--st-color-tabs-border);
+		border-radius: 0.75rem;
+		padding: 0.25rem;
+		background: var(--st-color-tabs-bg);
+	}
+	a {
+		border-radius: 0.5rem;
+		padding: 0.375rem 0.75rem;
+		color: var(--st-color-tabs-text);
+		font-size: 0.875rem;
+		font-weight: 600;
+		line-height: 1.5;
+		text-decoration: none;
+	}
+	a:hover {
+		color: var(--sl-color-white);
+	}
+	a[aria-current='true'] {
+		background: var(--st-color-tabs-current);
+		box-shadow:
+			0 0 0 1px var(--sl-color-hairline),
+			0 1px 3px rgb(0 0 0 / 0.1);
+		color: var(--sl-color-white);
+	}
+</style>

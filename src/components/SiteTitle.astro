@@ -1,0 +1,45 @@
+---
+// Override of Starlight's SiteTitle: the site name as text and a pill that says the site
+// is not the publisher's. The official docs show the Stitch wordmark and a "BETA" pill
+// here; this site borrows the layout, not the logo.
+import { LABELS, localeOf } from '../lib/site.mjs';
+
+const { siteTitle, siteTitleHref, entry } = Astro.locals.starlightRoute;
+const t = LABELS[localeOf(entry.id).lang];
+---
+
+<a href={siteTitleHref} class="site-title" translate="no">
+	<span class="name">{siteTitle}</span>
+	<span class="pill">{t.unofficial}</span>
+</a>
+
+<style>
+	.site-title {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		min-width: 0;
+		color: var(--sl-color-white);
+		font-family: var(--st-font-display);
+		font-size: 1.5rem;
+		font-weight: 500;
+		letter-spacing: -0.02em;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	.pill {
+		border: 1px solid currentColor;
+		border-radius: 999px;
+		padding: 0.1rem 0.5rem;
+		font-family: var(--sl-font);
+		font-size: 0.6875rem;
+		font-weight: 500;
+		letter-spacing: 0.02em;
+		line-height: 1.4;
+	}
+	@media (max-width: 24rem) {
+		.site-title {
+			font-size: 1.25rem;
+		}
+	}
+</style>

@@ -1,0 +1,36 @@
+---
+// Override of Starlight's PageTitle: a small section label above a large title, as on the
+// official docs. The label is the name of the page's section in SECTIONS; the home page
+// has none.
+import { sectionOf, pageId } from '../lib/site.mjs';
+
+const { entry } = Astro.locals.starlightRoute;
+const section = sectionOf(pageId(entry.id));
+---
+
+{section && <p class="eyebrow">{section.label}</p>}
+<h1 id="_top">{entry.data.title}</h1>
+
+<style>
+	.eyebrow {
+		margin: 2.5rem 0 1.5rem;
+		color: var(--st-color-eyebrow);
+		font-size: 0.875rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		line-height: 1.4;
+		text-transform: uppercase;
+	}
+	h1 {
+		margin-top: 2.5rem;
+		color: var(--sl-color-white);
+		font-family: var(--st-font-display);
+		font-size: clamp(2.5rem, 1.2rem + 5.5vw, 4.5rem);
+		font-weight: 500;
+		letter-spacing: -0.025em;
+		line-height: 1.2;
+	}
+	.eyebrow + h1 {
+		margin-top: 0;
+	}
+</style>

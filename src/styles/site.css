@@ -1,0 +1,310 @@
+/* Skin after the official Stitch docs (stitch.google.com/docs): near-black or white ground,
+   one pink accent, Google Sans, a large title with a small section label, a boxed prompt.
+   Values were read from the official pages on 2026-11-20. Nothing here adds text to the
+   page except the "PROMPT" label on prompt blocks, which is drawn with CSS `content`. */
+
+:root {
+	--st-font-latin: 'Google Sans', 'Google Sans Text';
+	--st-font-cjk: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei';
+	--sl-font: var(--st-font-latin), var(--st-font-cjk), system-ui, sans-serif;
+	--st-font-display: var(--st-font-latin), var(--st-font-cjk), system-ui, sans-serif;
+	--sl-font-mono: 'Google Sans Code', 'Google Sans Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Noto Sans TC', monospace;
+	--sl-content-width: 45rem;
+	--sl-sidebar-width: 15.625rem;
+	--sl-nav-height: 4rem;
+	--sl-line-height: 1.75;
+
+	--sl-color-white: #fff;
+	--sl-color-gray-1: #e5e5e5;
+	--sl-color-gray-2: #a6a6a6;
+	--sl-color-gray-3: #9d9d9d;
+	--sl-color-gray-4: #5c5c5c;
+	--sl-color-gray-5: #323232;
+	--sl-color-gray-6: #1c1c1f;
+	--sl-color-black: #161618;
+	--sl-color-accent-low: #3a1f30;
+	--sl-color-accent: #ffd0ee;
+	--sl-color-accent-high: #ffd0ee;
+	--sl-color-text: #e5e5e5;
+	--sl-color-text-accent: #ffd0ee;
+	--sl-color-text-invert: #161618;
+	--sl-color-bg: #161618;
+	--sl-color-bg-nav: #121214;
+	--sl-color-bg-sidebar: #121214;
+	--sl-color-bg-inline-code: #323232;
+	--sl-color-hairline: rgb(255 255 255 / 0.08);
+	--sl-color-hairline-light: rgb(255 255 255 / 0.12);
+	--sl-color-hairline-shade: #2e2e32;
+	--st-color-surface: #1c1c1f;
+	--st-color-subtitle: #9a9a9a;
+	--st-color-eyebrow: #ffb8e4;
+	--st-color-code-border: transparent;
+	--st-color-tabs-bg: rgb(255 255 255 / 0.05);
+	--st-color-tabs-border: rgb(255 255 255 / 0.05);
+	--st-color-tabs-current: #2e2e32;
+	--st-color-tabs-text: #9ca3af;
+}
+:root[data-theme='light'] {
+	--sl-color-white: #161618;
+	--sl-color-gray-1: #1d1d1d;
+	--sl-color-gray-2: #323232;
+	--sl-color-gray-3: #5f5f5f;
+	--sl-color-gray-4: #9d9d9d;
+	--sl-color-gray-5: #cecece;
+	--sl-color-gray-6: #ebebeb;
+	--sl-color-gray-7: #f5f5f5;
+	--sl-color-black: #fff;
+	--sl-color-accent-low: #fce4f0;
+	--sl-color-accent: #c4277d;
+	--sl-color-accent-high: #4a1533;
+	--sl-color-text: #1d1d1d;
+	--sl-color-text-accent: #c4277d;
+	--sl-color-text-invert: #f5f5f5;
+	--sl-color-bg: #fff;
+	--sl-color-bg-nav: #fcfcfc;
+	--sl-color-bg-sidebar: #fff;
+	--sl-color-bg-inline-code: #e6e6e6;
+	--sl-color-hairline: rgb(0 0 0 / 0.08);
+	--sl-color-hairline-light: rgb(0 0 0 / 0.12);
+	--sl-color-hairline-shade: #e5e5e5;
+	--st-color-surface: #fafafa;
+	--st-color-subtitle: #404040;
+	--st-color-eyebrow: #161618;
+	--st-color-code-border: #cecece;
+	--st-color-tabs-bg: rgb(218 218 218 / 0.5);
+	--st-color-tabs-border: #fff;
+	--st-color-tabs-current: #fff;
+	--st-color-tabs-text: #4b5563;
+}
+
+/* Wide windows: the table of contents keeps the width of the left sidebar and the text
+   column sits in the middle of the space between the two. Starlight's default gives the
+   table of contents all the spare width and pushes the text column against it. */
+@media (min-width: 72rem) {
+	.right-sidebar-container {
+		width: var(--sl-sidebar-width);
+	}
+	[data-has-sidebar][data-has-toc] .main-pane {
+		--sl-content-margin-inline: auto;
+		width: calc(100% - var(--sl-sidebar-width));
+	}
+}
+
+/* Header */
+header.header {
+	border-bottom: 1px solid var(--sl-color-hairline-shade);
+}
+site-search button[data-open-modal] {
+	border-radius: 0.5rem;
+}
+
+/* Sidebar: a small capital group label, quiet links, the current page on the accent. */
+.sidebar-pane {
+	border-inline-end: 1px solid var(--sl-color-hairline-shade);
+}
+#starlight__sidebar .top-level > li > details > summary .large {
+	color: var(--sl-color-white);
+	font-size: 0.8125rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+#starlight__sidebar details ul li {
+	margin-inline-start: 0;
+	border-inline-start: 0;
+	padding-inline-start: 0;
+}
+#starlight__sidebar details ul a {
+	border-radius: 0.25rem;
+	padding: 0.375rem 0.75rem;
+	color: var(--sl-color-gray-3);
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+#starlight__sidebar details ul a:hover {
+	color: var(--sl-color-white);
+}
+#starlight__sidebar details ul a[aria-current='page'] {
+	background-color: var(--sl-color-accent);
+	color: var(--sl-color-text-invert);
+	font-weight: 500;
+}
+:root[data-theme='light'] #starlight__sidebar details ul a {
+	color: var(--sl-color-gray-2);
+}
+:root[data-theme='light'] #starlight__sidebar details ul a[aria-current='page'] {
+	background-color: var(--sl-color-accent-low);
+	color: var(--sl-color-text);
+}
+
+/* Table of contents: main entries in bold, sub-entries quiet. */
+starlight-toc h2,
+mobile-starlight-toc .toggle {
+	font-family: var(--st-font-display);
+}
+starlight-toc ul a {
+	color: var(--sl-color-text);
+	font-weight: 600;
+}
+starlight-toc ul ul a {
+	color: var(--sl-color-gray-3);
+	font-weight: 400;
+}
+starlight-toc a[aria-current='true'] {
+	color: var(--sl-color-text-accent);
+}
+
+/* Title panel and body panel: no rule between them; the rule comes after the subtitle. */
+.content-panel + .content-panel {
+	border-top: 0;
+	padding-top: 0;
+}
+
+/* Body */
+.sl-markdown-content {
+	line-height: 1.75;
+}
+.sl-markdown-content :is(h2, h3, h4) {
+	color: var(--sl-color-white);
+	font-family: var(--st-font-display);
+	font-weight: 500;
+}
+.sl-markdown-content .sl-heading-wrapper.level-h2 {
+	margin-top: 3.5rem;
+}
+.sl-markdown-content h2 {
+	font-size: 1.5rem;
+	letter-spacing: -0.02em;
+	line-height: 1.35;
+}
+.sl-markdown-content .sl-heading-wrapper.level-h3 {
+	margin-top: 2rem;
+}
+.sl-markdown-content h3 {
+	font-size: 1.25rem;
+	letter-spacing: -0.015em;
+	line-height: 1.4;
+}
+.sl-markdown-content a:not(.sl-anchor-link) {
+	color: var(--sl-color-text-accent);
+	text-underline-offset: 0.2em;
+}
+
+/* Tables take the full width; the first column holds a name or a key and does not wrap. */
+.sl-markdown-content table {
+	display: table;
+	width: 100%;
+	font-size: 0.9375rem;
+	line-height: 1.65;
+}
+.sl-markdown-content :is(th, td) {
+	border-bottom: 1px solid var(--sl-color-hairline-light);
+	/* Room for a short word, so that long names elsewhere in the row cannot squeeze a column flat. */
+	min-width: 4.5em;
+	padding: 0.6rem 0.75rem;
+	vertical-align: top;
+}
+.sl-markdown-content :is(th, td):first-child {
+	padding-inline-start: 0;
+	white-space: nowrap;
+}
+.sl-markdown-content th {
+	border-bottom-color: var(--sl-color-gray-5);
+	color: var(--sl-color-gray-3);
+	font-size: 0.8125rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-align: start;
+	/* Column headings stay on one line, so a narrow column is never one character wide. */
+	white-space: nowrap;
+}
+.sl-markdown-content td {
+	overflow-wrap: anywhere;
+}
+
+/* Names from the Stitch interface and keys are written as inline code. */
+.sl-markdown-content :not(pre) > code {
+	border: 1px solid var(--st-color-code-border);
+	border-radius: 0.25rem;
+	padding: 0.05rem 0.35rem;
+	color: var(--sl-color-text);
+	font-size: 0.85em;
+}
+
+/* Prompt examples (code blocks in `text`) look like the prompt box of the official docs:
+   a rounded panel, a small capital label, the prompt in the text font. Other code blocks
+   keep the panel and the monospace font. */
+.sl-markdown-content .expressive-code .frame {
+	--ec-brdRad: 0.75rem;
+	--ec-brdCol: var(--sl-color-gray-5);
+	--ec-codeBg: var(--st-color-surface);
+	--ec-frm-edBg: var(--st-color-surface);
+	--ec-frm-trmBg: var(--st-color-surface);
+	--ec-frm-shdCol: transparent;
+	box-shadow: none;
+}
+.sl-markdown-content .expressive-code .frame pre {
+	border-radius: 0.75rem;
+	padding: 0.25rem 0.25rem 0.5rem;
+}
+.sl-markdown-content .expressive-code .ec-line .code {
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+/* The code-block styles lay `pre` out as a row; the label needs a row of its own. */
+.sl-markdown-content .expressive-code pre[data-language='text'] {
+	flex-direction: column;
+}
+.sl-markdown-content .expressive-code pre[data-language='text'] > code {
+	flex: 0 0 auto;
+}
+.sl-markdown-content .expressive-code pre[data-language='text']::before {
+	content: 'PROMPT';
+	display: block;
+	padding: 0.85rem 1.1rem 0.15rem;
+	color: var(--sl-color-gray-3);
+	font-family: var(--sl-font);
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+}
+.sl-markdown-content .expressive-code pre[data-language='text'] code {
+	font-family: var(--sl-font);
+	font-size: 0.9375rem;
+	line-height: 1.7;
+}
+.sl-markdown-content .expressive-code pre[data-language='text'] .ec-line .code span {
+	color: var(--sl-color-text) !important;
+}
+/* One line of a prompt is one part of it: leave a little air between the parts. */
+.sl-markdown-content .expressive-code pre[data-language='text'] .ec-line + .ec-line {
+	margin-top: 0.4rem;
+}
+
+/* Long names in a table cell may break anywhere, so a table never pushes the page
+   sideways. `break-word` keeps names whole but made tables overflow on ten pages. */
+.sl-markdown-content td code {
+	overflow-wrap: anywhere;
+	white-space: normal;
+}
+
+/* Narrow windows: a table scrolls inside its own box, every column keeps room for a short
+   word, and the first column may wrap. */
+@media (max-width: 50rem) {
+	.sl-markdown-content table {
+		display: block;
+		overflow-x: auto;
+	}
+	.sl-markdown-content :is(th, td) {
+		min-width: 5.5em;
+		padding: 0.5rem 0.5rem;
+	}
+	/* A table of four or more columns keeps wider cells and scrolls sideways instead of
+	   stacking its text one or two characters to a line. */
+	.sl-markdown-content tr:has(> :nth-child(4)) > :is(th, td) {
+		min-width: 8.5em;
+	}
+	.sl-markdown-content :is(th, td):first-child {
+		white-space: normal;
+	}
+}
