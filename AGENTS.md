@@ -77,4 +77,7 @@ pnpm preview             # serve dist/ at http://127.0.0.1:4401/stitch-zh/ with 
 | `scripts/upstream-html.mjs` | Full text of the official rendered pages, for writing |
 | `scripts/lint-content.mjs` | Content checks that need no build |
 | `scripts/check-dist.mjs`, `scripts/preview.mjs` | Acceptance checks, local preview |
+| `src/lib/sitemap.mjs` | Sitemap options: `lastmod` of each page from `lastVerified` |
+| `scripts/check-found.mjs` | Checks called by `check-dist.mjs`: a title and description of its own for every page, canonical, `hreflang`, sitemap |
+| `tests/agent-eval/questions.json` | The site's question list: what readers ask, each with the expected answer and qualifier. The agent test and the search test draw from it |
 | `tests/agent-eval/` | Fetch tool, questions and method for the agent test |

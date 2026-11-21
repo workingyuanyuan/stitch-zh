@@ -1,7 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import sitemap from '@astrojs/sitemap';
 import starlightLinksValidator from 'starlight-links-validator';
+import { sitemapOptions } from './src/lib/sitemap.mjs';
 import { ORIGIN, BASE, TITLE, DESCRIPTION, SECTIONS } from './src/lib/site.mjs';
 import { satteri } from '@astrojs/markdown-satteri';
 import { hastBase } from './src/lib/hast-base.mjs';
@@ -15,6 +17,8 @@ export default defineConfig({
 	// prose must reach the page as typed.
 	markdown: { smartypants: false, processor: satteri({ hastPlugins: [hastBase] }) },
 	integrations: [
+		// Added here so that it takes options; Starlight then leaves its own copy out.
+		sitemap(sitemapOptions()),
 		starlight({
 			title: TITLE['zh-TW'],
 			description: DESCRIPTION,

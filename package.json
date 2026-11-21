@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "0.4.10",
+    "@astrojs/sitemap": "^3.7.5",
     "@astrojs/starlight": "^0.43.1",
     "astro": "^7.3.6",
     "satteri": "0.11.7",
