@@ -1,6 +1,6 @@
 # Stitch 中文教學
 
-Live site: https://workingyuanyuan.github.io/stitch-zh/ . Page list for agents: https://workingyuanyuan.github.io/stitch-zh/llms.txt
+Live site: https://yuanaruru.com/stitch-zh/ . Page list for agents: https://yuanaruru.com/stitch-zh/llms.txt
 
 Unofficial Traditional Chinese tutorial for Google Stitch and its developer tools (CLI, MCP, SDK, DESIGN.md, Agent Skills), written from the official English documentation at https://stitch.google.com/docs/ and checked against the published packages. Not affiliated with Google. It is an original tutorial, not a translation of the official pages.
 

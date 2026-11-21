@@ -3,7 +3,7 @@
 
 // The public address, including the sub-path of a GitHub Pages project site, without a
 // trailing slash. SITE_URL overrides it for local agent tests (see tests/agent-eval/README.md).
-export const SITE = (process.env.SITE_URL ?? 'https://workingyuanyuan.github.io/stitch-zh').replace(/\/+$/, '');
+export const SITE = (process.env.SITE_URL ?? 'https://yuanaruru.com/stitch-zh').replace(/\/+$/, '');
 /** Scheme and host of SITE. */
 export const ORIGIN = new URL(SITE).origin;
 /** Sub-path the site is served under: `/stitch-zh`, or the empty string at a domain root. */
