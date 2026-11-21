@@ -223,5 +223,191 @@
 			"sha256": "3f607a24cc4264da7e08d34bd4bda009a792b339395da90929a74ad50b75b3bd",
 			"characters": 2854
 		}
+	},
+	"rendered": {
+		"cli/agent-bridge": {
+			"sha256": "22127d693588a1c266050456d79241b1c862cb3dffcc89b5c75f3ff86f178f86",
+			"characters": 7241
+		},
+		"cli/capture-and-upload": {
+			"sha256": "44f39cfa874e3821c05708f3ba7b210ed0956a071f299ee289f1277a9a3fd423",
+			"characters": 4263
+		},
+		"cli/codebase-prototyping": {
+			"sha256": "2ea269fb3a7089fca931d435e2c4e5e438eb711a17d78d09934b00de07dbfbcf",
+			"characters": 3061
+		},
+		"cli/design-review": {
+			"sha256": "e5e635af7a5c9dc5fe1e21d64776de45463881f81acf13103a2eae3b01c5bd0d",
+			"characters": 2943
+		},
+		"cli/design-systems": {
+			"sha256": "76e9448e01a2ecddffce19beda32089c3ca3bcccd7e46e5409c0d267103362af",
+			"characters": 3239
+		},
+		"cli/mcp-and-skills": {
+			"sha256": "799a50386d81201890f2463da819b671179fbbf3868791f01fb722499093ba0e",
+			"characters": 3494
+		},
+		"cli/overview": {
+			"sha256": "0a70233dbee3ff448a45e22a5b1401e28b0b0c26e48849a692a084dc6bd1f93a",
+			"characters": 3367
+		},
+		"cli/priorities-and-context": {
+			"sha256": "712b7beace28a6e770795aa10dff9cc1a8b31ea682a2784e0b1775272c445ff3",
+			"characters": 3935
+		},
+		"cli/reference/commands": {
+			"sha256": "5e48205c3776942763c05437c2b416be3c36bcc732c6c5cad70a87747024290d",
+			"characters": 31736
+		},
+		"cli/reference/mcp-tools": {
+			"sha256": "033d47150ea8005b571ce513b3f89a98f5195c83bf1d91abcdd628c8c2878396",
+			"characters": 21874
+		},
+		"cli/reference/rest-api": {
+			"sha256": "d27c2dec535a4d4da1d51b3d9dcfcb1b38a4497dd82ec1085501a26738942795",
+			"characters": 47464
+		},
+		"cli/screens-and-variants": {
+			"sha256": "1ac7a14a51dab11ac5e72d468702ed66fed192f8126438c5a8f462ef46de795a",
+			"characters": 3918
+		},
+		"cli/workspaces-and-projects": {
+			"sha256": "b82e63f0689eadb2a07dd11f059d70d5cc790f6abf628cc5495928ab74d0819a",
+			"characters": 3650
+		},
+		"design-md/cli": {
+			"sha256": "7e9a9437fa8865ea1aea66c07a98c5ea46d35fe28649a240b7c393a8110ecfbd",
+			"characters": 3637
+		},
+		"design-md/get-instructions": {
+			"sha256": "a0147184c066ef514a4ecebb6cff40265ac62ce76060875bce2059504a325053",
+			"characters": 5997
+		},
+		"design-md/linting-rules": {
+			"sha256": "e2b186639b796bc849689ebb9fb3f02f02084aff13b818f821b46a73de13e92d",
+			"characters": 5152
+		},
+		"design-md/overview": {
+			"sha256": "0818d9774ecd30d2994c63173c9457738d4db8bfecfa9c3b1f4342504fdeaa52",
+			"characters": 4159
+		},
+		"design-md/specification": {
+			"sha256": "305ca27bb0884321f7cc9121fc22af64ad9aacf32a20b830b76f87ed011d0240",
+			"characters": 9673
+		},
+		"design-md/usage": {
+			"sha256": "55a5ed4673971d47d04701be112cf2eab8522a44e196bab39b047c8194c7e7e5",
+			"characters": 1781
+		},
+		"learn/controls": {
+			"sha256": "9439dd411aff3bf7481479d96f3e07886a1929a37af0c91b74351a2892de4264",
+			"characters": 5806
+		},
+		"learn/design-modes": {
+			"sha256": "5746f7898269f7ac6efc0190c51df7d688289645200c38a93f35579c7c905c5e",
+			"characters": 3680
+		},
+		"learn/device-types": {
+			"sha256": "1c5c2c5365b4b196160c14635a62e145599d6bdd4333549e39dcdd5d5b650100",
+			"characters": 4182
+		},
+		"learn/overview": {
+			"sha256": "4c7978c944997cef82eef35347adcc730363e90114ffc7d3451e370a71c9cd77",
+			"characters": 4912
+		},
+		"learn/prompting": {
+			"sha256": "ef825a84dded6d32e8443c78b20d011e7005196d4dd77f18da220fba23804efc",
+			"characters": 3756
+		},
+		"learn/variants": {
+			"sha256": "4fd483b1cf54d5e93603acb06a71704009f080e6cf096d7d4356351e021c867b",
+			"characters": 2619
+		},
+		"mcp/guide": {
+			"sha256": "c734114e4c9aa0d8cadc68f3f9eac7ea8e3dad3897bf1c7e8b5526462c805489",
+			"characters": 4161
+		},
+		"mcp/reference": {
+			"sha256": "f2134d4d3a4abf3bcf84a36a765847447d73aa9f1385b444aa2fc8e3f48b9f83",
+			"characters": 22218
+		},
+		"mcp/setup": {
+			"sha256": "ea3d9c965c18054cf846d52f2ff68cdc43877d68c3316fb08e7ceecf2d2a8a37",
+			"characters": 10832
+		},
+		"sdk/agent-workflows": {
+			"sha256": "971388193fa5ce86fb408a1d63078ee986398a68c0e74b751b7d166585e6b81f",
+			"characters": 4073
+		},
+		"sdk/ai-sdk": {
+			"sha256": "694694f13f33c8a9ea9126813aad661c07acdd9bbc9342a376264bf75fa2ea59",
+			"characters": 1807
+		},
+		"sdk/architecture": {
+			"sha256": "c5692bbc6e641997872d9c85222e37210a2b180cf638985184b32b829588f6c1",
+			"characters": 3632
+		},
+		"sdk/design-md": {
+			"sha256": "ebe444cadf5d2f99de1ad2678544277dc40acef2c4f86ffd29ebe8d63b0ad2d7",
+			"characters": 3332
+		},
+		"sdk/design-systems": {
+			"sha256": "aa6d412dbf63754bdfd606775bdac86ae1b93ce633a371461c6ce5208ce75d38",
+			"characters": 3291
+		},
+		"sdk/download-artifacts": {
+			"sha256": "c16af6335f905f830cf94ba36383159602585f788ce2ffa08549426045f6b125",
+			"characters": 1702
+		},
+		"sdk/edit-screen": {
+			"sha256": "530a69493e2a4f2f15fc2bdd6dae570c1134c1bab32dae4e19c728051a07deef",
+			"characters": 1304
+		},
+		"sdk/extract-themes": {
+			"sha256": "532dcb43407b5f54a8b05f341534ae70bd7a7c8e7b0a2b1de1ee0428664656a5",
+			"characters": 1995
+		},
+		"sdk/generate-variants": {
+			"sha256": "076d5a76770760bc7ee1f61bfaa2f1122715f016f5440474fbc59d114e96113c",
+			"characters": 1379
+		},
+		"sdk/reference": {
+			"sha256": "2300606cbd049c1af9cf0a911139b6c3aa054ce8c3274ca0746658b10311091c",
+			"characters": 7589
+		},
+		"sdk/tutorial": {
+			"sha256": "ef72a9709c79e9a5dbc9843e4f22975be404568ca347f4c618977b24b10125a8",
+			"characters": 2640
+		},
+		"sdk/upload-image": {
+			"sha256": "9681fce5b2227125280a14c0008993bdbf47bbe6587606518143b8a622da4e72",
+			"characters": 2453
+		},
+		"skills/build-in-a-loop": {
+			"sha256": "d6280d3e691a307b3f39f4a8b440f2409c8cb4a066f94f7b39bd6ee25a0f3a4f",
+			"characters": 3291
+		},
+		"skills/get-started": {
+			"sha256": "e1ea06ae82549a0ccd6eade5e1eedad29b237bb1477ade770cf7d8e358bfb362",
+			"characters": 3636
+		},
+		"skills/reference": {
+			"sha256": "0f760a60d50c9e950a7d7400b05b1259ab3dd323f1f7514affc815126de43b64",
+			"characters": 4527
+		},
+		"skills/roundtrip": {
+			"sha256": "8e2ab2667b0648d2268eb341e4b66c20b05a088682f879fbc8c1b883ea08ca71",
+			"characters": 3992
+		},
+		"skills/taste": {
+			"sha256": "2ba12a0500da4e50778685f54e68cef6b6da9f1053aa7e341686760bdb9e7990",
+			"characters": 4189
+		},
+		"skills/walkthrough-videos": {
+			"sha256": "183efa36f2f2b5a2ad787fff90e7cbe97c68831f596189484cacf6df3eb96b9a",
+			"characters": 2699
+		}
 	}
 }

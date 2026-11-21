@@ -8,20 +8,24 @@ This site is an unofficial Traditional Chinese tutorial for Google Stitch, the A
 - Traditional Chinese only, at the root. There is no English version: English readers have the official site.
 - Scope: the home page and 46 pages, one for every official page with content: Stitch (`learn/`, 6), CLI (13), MCP (3), SDK (12), DESIGN.md (6), Agent Skills (6). `sdk/design-md` is an official page that the official sidebar does not list; it has a page here.
 - The four large official reference pages (`cli/reference/commands`, `cli/reference/rest-api`, `cli/reference/mcp-tools`, `mcp/reference`) become Chinese lookup tables that link to the official page for the full fields. Keep the tools of the CLI's built-in MCP server apart from the tools of the remote MCP service: the two lists differ.
-- Name and address: `stitch-zh`, `https://workingyuanyuan.github.io/stitch-zh/`. Published on 2026-11-20 after the owner confirmed. The 非官方 pill in the header stays (owner, 2026-11-20).
+- Name and address: `stitch-zh`, `https://yuanaruru.com/stitch-zh/`. Published on 2026-11-20 after the owner confirmed. The 非官方 pill in the header stays (owner, 2026-11-20).
 
-## Where this site differs from `../AGENTS.md`
+## Choices under "Decide per site" in `../AGENTS.md`
 
-- One language, so the rules on translation and language parity do not apply.
-- The official docs have no version number and no fixed-version URL. `appliesTo` names the date the official page was read ("Stitch 網頁版（2026-11-20）") and, where a page was checked against a package, the package versions ("Stitch SDK（@google/stitch-sdk 0.3.5 與 0.4.0，2026-11-20）"). `sources` links the live official page, and `upstream/manifest.json` records the SHA-256 of each official page on that date.
+- Languages: one, so there is no translation step and no parity check.
+- Sources: the official docs, and the published packages where a page's subject ships as one. The docs have no licence, so their text is not reused (first decision above) and copies of it are not committed.
+- Pages are hand-written Markdown. The home page links every page.
+- Look: the look of the official docs (see Skin rules).
+- The owner confirms before a change goes live.
+- The official docs have no version number and no fixed-version URL. `appliesTo` names the date the official page was read ("Stitch 網頁版（2026-11-20）") and, where a page was checked against a package, the package versions ("Stitch SDK（@google/stitch-sdk 0.3.5 與 0.4.0，2026-11-20）"). `sources` links the live official page, and `upstream/manifest.json` records two SHA-256 fingerprints from that date: the Markdown twin of every official page, and the rendered article text of every page this site has.
 
 ## Commands
 
 ```
 pnpm verify              # build, then run the acceptance checks. Run this before you call a change done.
-pnpm upstream            # compare the official docs with upstream/manifest.json; exit 1 when a page was added, removed or changed
+pnpm upstream            # compare the official docs (Markdown twins and rendered pages) with upstream/manifest.json; exit 1 on any difference
 pnpm upstream --write    # save the official Markdown in cache/upstream/ and update the manifest
-pnpm upstream:html       # save the text of the official rendered pages in cache/upstream-html/
+pnpm upstream:html       # save the text of the official rendered pages in cache/upstream-html/, for reading
 pnpm lint [dir ...]      # check content pages without building (frontmatter, links, fences, wording)
 pnpm preview             # serve dist/ at http://127.0.0.1:4401/stitch-zh/ with GitHub Pages style headers
 ```
@@ -31,14 +35,14 @@ pnpm preview             # serve dist/ at http://127.0.0.1:4401/stitch-zh/ with 
 - `https://stitch.google.com/docs/` is a shell that loads the docs in a frame from `https://app-companion-430619.appspot.com/docs/`. A plain HTTP fetch of `stitch.google.com` returns no content. The frame origin serves a Markdown twin of every page (`/docs/<path>.md`) and the list at `/docs/llms.txt`; `scripts/upstream.mjs` reads them.
 - The `.md` links in the official `llms.txt` point at `stitch.withgoogle.com`, which redirects to the shell at `stitch.google.com`.
 - On 2026-11-20 the list had 55 pages. Seven hold only "Coming soon" (`build/code`, `build/backend`, `build/deploy`, `blueprints/dashboards`, `blueprints/github-landing`, `learn/edit-theme`, `learn/prototypes`) and `design-md/format` is a redirect to `design-md/specification`. None of the eight gets a page here.
-- The official Markdown twins are lossy. Missing from them on 2026-11-20: the import lines of code samples, some code blocks inside tabs (three in `cli/capture-and-upload`, two in `sdk/agent-workflows`), and every `<placeholder>` or generic type written outside a code fence (`Bearer <YOUR_ACCESS_TOKEN>`, `Promise<Project>`, `--id <id>`). The rendered page has them. Write a page from `cache/upstream-html/<path>.md` (`pnpm upstream:html`), and use the twin only for its hash.
+- The official Markdown twins are lossy. Missing from them on 2026-11-20: the import lines of code samples, some code blocks inside tabs (three in `cli/capture-and-upload`, two in `sdk/agent-workflows`), and every `<placeholder>` or generic type written outside a code fence (`Bearer <YOUR_ACCESS_TOKEN>`, `Promise<Project>`, `--id <id>`). The rendered page has them. Write a page from `cache/upstream-html/<path>.md` (`pnpm upstream:html`). The drift check fingerprints the rendered article text of the pages this site has, because a change in those missing parts does not show in the twin; the twins are fingerprinted too, to find pages that were added or removed and the official pages this site has no page for.
 - The docs name no version of the CLI, the SDK or the DESIGN.md tools, and they differ from the published packages. Found on 2026-11-20:
   - SDK: the docs write `numVariants`, the package types declare `variantCount`; the docs say `upload()` returns a result object and never throws, both package versions declare `Promise<Screen[]>`; `uploadDesignMd` and `createDesignSystemFromDesignMd` exist in 0.4.0 (npm `next`) and not in 0.3.5 (npm `latest`); the docs import `toolDefinitions` from a subpath no version exports; the docs ask for Node.js 20, `package.json` says `>=18`.
   - DESIGN.md: the docs list 8 lint rules and 8 sections, the repository README at commit `db977b3` lists 11 rules and 10 sections, more export formats and the `designmd` alias for Windows.
   - CLI: the README of `@google/stitch` 0.13.0 has `stitch dismiss`, `--concurrency`, `--priority`, the `stitch-mcp` executable and a `--json [payload]` form that the docs lack.
 - A page whose subject ships as a package is checked against the package at a fixed version (type declarations, README), and says where the docs differ, in a closing section 「和已發布套件的差異」 with the package file in `sources` (fixed-version `unpkg.com` URL, or a GitHub URL with the commit). Code samples use the names the package declares. `cache/packages/` holds the files read.
 - `cache/upstream/`, `cache/upstream-html/` and `cache/packages/` hold source text for reading. They are not committed.
-- When `pnpm upstream` reports a change: read the new official page, update the Chinese page, set `lastVerified` and the date in `appliesTo`, then run `pnpm upstream --write`.
+- When `pnpm upstream` reports a change: run `pnpm upstream:html`, read the new text of the page, update the Chinese page, set `lastVerified` and the date in `appliesTo`, then run `pnpm upstream --write`. "changed (rendered)" names a page of this site; "changed (Markdown)" alone means the twin changed and the article text did not, or the page is one this site does not have.
 - The official CLI, SDK and DESIGN.md repositories (`google-labs-code/stitch-sdk`, `stitch-skills`, `design.md`) are Apache-2.0. That licence covers those repositories, not the docs site.
 
 ## Content rules
@@ -75,6 +79,7 @@ pnpm preview             # serve dist/ at http://127.0.0.1:4401/stitch-zh/ with 
 | `src/components/`, `src/styles/site.css` | The five overrides and the skin |
 | `scripts/upstream.mjs`, `upstream/manifest.json` | Drift check against the official docs |
 | `scripts/upstream-html.mjs` | Full text of the official rendered pages, for writing |
+| `scripts/upstream-lib.mjs` | The docs origin and the reading of a rendered article, shared by the two scripts |
 | `scripts/lint-content.mjs` | Content checks that need no build |
 | `scripts/check-dist.mjs`, `scripts/preview.mjs` | Acceptance checks, local preview |
 | `src/lib/sitemap.mjs` | Sitemap options: `lastmod` of each page from `lastVerified` |
