@@ -8,12 +8,29 @@ import { JSDOM } from 'jsdom';
 
 export const ORIGIN = 'https://app-companion-430619.appspot.com';
 
-/** Fetches a path on the docs origin. Returns null for a 404, throws for any other failure. */
-export async function fetchText(path) {
-	const res = await fetch(ORIGIN + path);
+/**
+ * Fetches a path on the docs origin. Returns null for a 404, throws for any other failure.
+ * A network error, a timeout or a 5xx is tried once more after a pause.
+ */
+export async function fetchText(path, tries = 2) {
+	let res;
+	let body;
+	try {
+		res = await fetch(ORIGIN + path, { signal: AbortSignal.timeout(30_000) });
+		if (res.ok) body = await res.text();
+	} catch (error) {
+		if (tries > 1) return retry(path, tries);
+		throw new Error(`${path}: ${error.cause?.code ?? error.name}`);
+	}
 	if (res.status === 404) return null;
+	if (res.status >= 500 && tries > 1) return retry(path, tries);
 	if (!res.ok) throw new Error(`${path}: HTTP ${res.status}`);
-	return res.text();
+	return body;
+}
+
+async function retry(path, tries) {
+	await new Promise((resolve) => setTimeout(resolve, 5_000));
+	return fetchText(path, tries - 1);
 }
 
 /**
@@ -34,8 +51,11 @@ export async function renderedArticle(id) {
  * The text of a rendered article with every run of whitespace as one space. This is what the
  * drift check fingerprints: it holds the import lines, the code inside tabs and the
  * `<placeholder>` text that the official Markdown twins lack, and it does not change when
- * only the markup or a class name does.
+ * only the markup or a class name does. The link targets follow the text (not links within
+ * the page), because a page here may give a URL that the official page shows only as the
+ * target of a link.
  */
 export function articleText({ title, main }) {
-	return `${title}\n${main.textContent.replace(/\s+/g, ' ').trim()}`;
+	const links = [...main.querySelectorAll('a[href]')].map((a) => a.getAttribute('href')).filter((href) => !href.startsWith('#'));
+	return `${title}\n${main.textContent.replace(/\s+/g, ' ').trim()}\n${links.join('\n')}`;
 }

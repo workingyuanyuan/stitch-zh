@@ -1,0 +1,13 @@
+{
+	"noPage": {
+		"/docs/index.md": "The landing page of the official docs: cards that link the sections. This site's home page links every page instead.",
+		"/docs/build/code.md": "Holds only \"Coming soon\" (2026-11-20).",
+		"/docs/build/backend.md": "Holds only \"Coming soon\" (2026-11-20).",
+		"/docs/build/deploy.md": "Holds only \"Coming soon\" (2026-11-20).",
+		"/docs/blueprints/dashboards.md": "Holds only \"Coming soon\" (2026-11-20).",
+		"/docs/blueprints/github-landing.md": "Holds only \"Coming soon\" (2026-11-20).",
+		"/docs/learn/edit-theme.md": "Holds only \"Coming soon\" (2026-11-20).",
+		"/docs/learn/prototypes.md": "Holds only \"Coming soon\" (2026-11-20).",
+		"/docs/design-md/format.md": "A redirect to design-md/specification (2026-11-20)."
+	}
+}

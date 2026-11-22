@@ -1,7 +1,7 @@
 {
 	"origin": "https://app-companion-430619.appspot.com",
 	"index": "/docs/llms.txt",
-	"read": "2026-11-20",
+	"read": "2026-11-22",
 	"pages": {
 		"/docs/blueprints/dashboards.md": {
 			"sha256": "8e877c6f10e2a94c687497d7fdffec461788beefec22d7380cdcc0738a96ede6",
@@ -226,188 +226,188 @@
 	},
 	"rendered": {
 		"cli/agent-bridge": {
-			"sha256": "22127d693588a1c266050456d79241b1c862cb3dffcc89b5c75f3ff86f178f86",
-			"characters": 7241
+			"sha256": "fa2f763a74338e2fa4746fcfd7c377d0129452dfcb5081f8dd241bc40a8aab7a",
+			"characters": 7357
 		},
 		"cli/capture-and-upload": {
-			"sha256": "44f39cfa874e3821c05708f3ba7b210ed0956a071f299ee289f1277a9a3fd423",
-			"characters": 4263
+			"sha256": "f453e71646a7e152e336516ef66acf3f32e05fa935cb2c9054d37cded15960d7",
+			"characters": 4264
 		},
 		"cli/codebase-prototyping": {
-			"sha256": "2ea269fb3a7089fca931d435e2c4e5e438eb711a17d78d09934b00de07dbfbcf",
-			"characters": 3061
+			"sha256": "ac2b6e829b0a3e30580fa25951fb5f2bc2ec1d0006f597d9fa2f1d081d3df51c",
+			"characters": 3156
 		},
 		"cli/design-review": {
-			"sha256": "e5e635af7a5c9dc5fe1e21d64776de45463881f81acf13103a2eae3b01c5bd0d",
-			"characters": 2943
+			"sha256": "c31659254eafbd4999a3a5793046697ee9d3eb2a69c0302c2c12c7c2bf050b98",
+			"characters": 2995
 		},
 		"cli/design-systems": {
-			"sha256": "76e9448e01a2ecddffce19beda32089c3ca3bcccd7e46e5409c0d267103362af",
-			"characters": 3239
+			"sha256": "7f1f8439b4442799c8fa1dd389574ea77dff67cbf762fcee45b3670dba9234be",
+			"characters": 3265
 		},
 		"cli/mcp-and-skills": {
-			"sha256": "799a50386d81201890f2463da819b671179fbbf3868791f01fb722499093ba0e",
-			"characters": 3494
+			"sha256": "f86d0b95209bea3084c84e1ca4a86ded5a12d6276d80695165c8dd988861bb5f",
+			"characters": 3577
 		},
 		"cli/overview": {
-			"sha256": "0a70233dbee3ff448a45e22a5b1401e28b0b0c26e48849a692a084dc6bd1f93a",
-			"characters": 3367
+			"sha256": "1268350c7c2b6c6193c797756322064aaeab39f1ecf948bde7ed80664cfe7895",
+			"characters": 3661
 		},
 		"cli/priorities-and-context": {
-			"sha256": "712b7beace28a6e770795aa10dff9cc1a8b31ea682a2784e0b1775272c445ff3",
-			"characters": 3935
+			"sha256": "7f4f178b71df90f8e5e44060984f1bce44749fb0dedba75c8c13112ebec67890",
+			"characters": 3970
 		},
 		"cli/reference/commands": {
-			"sha256": "5e48205c3776942763c05437c2b416be3c36bcc732c6c5cad70a87747024290d",
-			"characters": 31736
+			"sha256": "418fa9cbeb4eb3b6a36d0ab7498b439647ade9f7ddadbd613f6f42bcea55427f",
+			"characters": 31758
 		},
 		"cli/reference/mcp-tools": {
-			"sha256": "033d47150ea8005b571ce513b3f89a98f5195c83bf1d91abcdd628c8c2878396",
-			"characters": 21874
+			"sha256": "37330971bbe892040df0737cd8e3edaefdd0b8c1cefcbb8e74fd269fb09ab087",
+			"characters": 21875
 		},
 		"cli/reference/rest-api": {
-			"sha256": "d27c2dec535a4d4da1d51b3d9dcfcb1b38a4497dd82ec1085501a26738942795",
-			"characters": 47464
+			"sha256": "aebf1bbc2315ece21e380223ef4be38fd0ef89ce9cc437106c150b355736cbeb",
+			"characters": 47545
 		},
 		"cli/screens-and-variants": {
-			"sha256": "1ac7a14a51dab11ac5e72d468702ed66fed192f8126438c5a8f462ef46de795a",
-			"characters": 3918
+			"sha256": "28431aaf68753bb152c7a7a15e18fd9532fb4caa8752b8a519b7a6c219b402f7",
+			"characters": 3942
 		},
 		"cli/workspaces-and-projects": {
-			"sha256": "b82e63f0689eadb2a07dd11f059d70d5cc790f6abf628cc5495928ab74d0819a",
-			"characters": 3650
-		},
-		"design-md/cli": {
-			"sha256": "7e9a9437fa8865ea1aea66c07a98c5ea46d35fe28649a240b7c393a8110ecfbd",
-			"characters": 3637
-		},
-		"design-md/get-instructions": {
-			"sha256": "a0147184c066ef514a4ecebb6cff40265ac62ce76060875bce2059504a325053",
-			"characters": 5997
-		},
-		"design-md/linting-rules": {
-			"sha256": "e2b186639b796bc849689ebb9fb3f02f02084aff13b818f821b46a73de13e92d",
-			"characters": 5152
-		},
-		"design-md/overview": {
-			"sha256": "0818d9774ecd30d2994c63173c9457738d4db8bfecfa9c3b1f4342504fdeaa52",
-			"characters": 4159
-		},
-		"design-md/specification": {
-			"sha256": "305ca27bb0884321f7cc9121fc22af64ad9aacf32a20b830b76f87ed011d0240",
-			"characters": 9673
-		},
-		"design-md/usage": {
-			"sha256": "55a5ed4673971d47d04701be112cf2eab8522a44e196bab39b047c8194c7e7e5",
-			"characters": 1781
-		},
-		"learn/controls": {
-			"sha256": "9439dd411aff3bf7481479d96f3e07886a1929a37af0c91b74351a2892de4264",
-			"characters": 5806
-		},
-		"learn/design-modes": {
-			"sha256": "5746f7898269f7ac6efc0190c51df7d688289645200c38a93f35579c7c905c5e",
-			"characters": 3680
-		},
-		"learn/device-types": {
-			"sha256": "1c5c2c5365b4b196160c14635a62e145599d6bdd4333549e39dcdd5d5b650100",
-			"characters": 4182
-		},
-		"learn/overview": {
-			"sha256": "4c7978c944997cef82eef35347adcc730363e90114ffc7d3451e370a71c9cd77",
-			"characters": 4912
-		},
-		"learn/prompting": {
-			"sha256": "ef825a84dded6d32e8443c78b20d011e7005196d4dd77f18da220fba23804efc",
+			"sha256": "69494c72ef515c149b2140cc194cb110999565d149b56e879c4e73060f628763",
 			"characters": 3756
 		},
+		"design-md/cli": {
+			"sha256": "5b18969a33d5ed32cd923d92010ed7c5e5b5385aa7399cf0d51d488fdb980c94",
+			"characters": 3704
+		},
+		"design-md/get-instructions": {
+			"sha256": "695bfeba1124e340ed8240da00a5366dc385679b150d16d9f282ad1ac6ae595e",
+			"characters": 6096
+		},
+		"design-md/linting-rules": {
+			"sha256": "48beb0c62318e338f380c1567feec1fdfd1654ccc047aaed6aea6db13c96af48",
+			"characters": 5197
+		},
+		"design-md/overview": {
+			"sha256": "60ea35c0cd2b133e2a071c3c509dc8cff6d34e6ec9b0f28f602585482552017c",
+			"characters": 4242
+		},
+		"design-md/specification": {
+			"sha256": "51c5cdecbf59db95e5f771dff1992e1e2163fe7ec22660779095a8e803c11860",
+			"characters": 9889
+		},
+		"design-md/usage": {
+			"sha256": "ccfbb497e55a4f69328180fe7a2592dfd47cc4c64cc482ea89c292ea0e8eb78f",
+			"characters": 1802
+		},
+		"learn/controls": {
+			"sha256": "bb876e277c6ad8e13405c993a7b9b1c188ac578e78ddcb4fd38169b0599d2e8e",
+			"characters": 5807
+		},
+		"learn/design-modes": {
+			"sha256": "88bbcca3f6dd2a7621c862dd05fd8fc57f0da0c8f2107178f54e54c4dcd0a562",
+			"characters": 3681
+		},
+		"learn/device-types": {
+			"sha256": "7ae3240fe193f480a8b323ef33d596a5af72e77ddb3c386bb057e572e9dc65b4",
+			"characters": 4183
+		},
+		"learn/overview": {
+			"sha256": "8c8973041e867813c6e0cf73473cb9bbd4fd82f65ac77fbe11028018cab38e51",
+			"characters": 4913
+		},
+		"learn/prompting": {
+			"sha256": "f8974989494cc4f7dcb5a9637269caaa4b4d1bca8a2ec38ced502ffd8f7fee83",
+			"characters": 3757
+		},
 		"learn/variants": {
-			"sha256": "4fd483b1cf54d5e93603acb06a71704009f080e6cf096d7d4356351e021c867b",
-			"characters": 2619
+			"sha256": "322e0dd15f846a86b86306d3ebf5af4e6e516d7d8f4d6c14b590b2741a8d1125",
+			"characters": 2620
 		},
 		"mcp/guide": {
-			"sha256": "c734114e4c9aa0d8cadc68f3f9eac7ea8e3dad3897bf1c7e8b5526462c805489",
-			"characters": 4161
+			"sha256": "c68d28917bad0a2a2b82680c2c122695870de8181a695f2b66ed22a7861babab",
+			"characters": 4318
 		},
 		"mcp/reference": {
-			"sha256": "f2134d4d3a4abf3bcf84a36a765847447d73aa9f1385b444aa2fc8e3f48b9f83",
-			"characters": 22218
+			"sha256": "0fd0553cd077c25c49ee8793ae23de81bdce302cb02715ac79b3a70cd3563916",
+			"characters": 22299
 		},
 		"mcp/setup": {
-			"sha256": "ea3d9c965c18054cf846d52f2ff68cdc43877d68c3316fb08e7ceecf2d2a8a37",
-			"characters": 10832
+			"sha256": "9b368b774452c27a7e66fdb6a67222007a207cc7eac526bd970ba9b9b2b0dde1",
+			"characters": 11048
 		},
 		"sdk/agent-workflows": {
-			"sha256": "971388193fa5ce86fb408a1d63078ee986398a68c0e74b751b7d166585e6b81f",
-			"characters": 4073
+			"sha256": "3e46f62313bdb94f9b8cf5dcd4b918339ba2200efe99d15cb4e6b590b2aa69a0",
+			"characters": 4090
 		},
 		"sdk/ai-sdk": {
-			"sha256": "694694f13f33c8a9ea9126813aad661c07acdd9bbc9342a376264bf75fa2ea59",
-			"characters": 1807
+			"sha256": "44f5f9b1e4a9108e1434f4c0016ed53146ba2d02a8ee0ab429299f2980e1e000",
+			"characters": 1852
 		},
 		"sdk/architecture": {
-			"sha256": "c5692bbc6e641997872d9c85222e37210a2b180cf638985184b32b829588f6c1",
-			"characters": 3632
+			"sha256": "f744512b56dbca2720fdb8502722eb6e59530c7226b73109d7b0082262048313",
+			"characters": 3633
 		},
 		"sdk/design-md": {
-			"sha256": "ebe444cadf5d2f99de1ad2678544277dc40acef2c4f86ffd29ebe8d63b0ad2d7",
-			"characters": 3332
+			"sha256": "22921f1f639deb47bce4af8a3be825b4f6d73054bb7961e43d66cc88ff10446b",
+			"characters": 3413
 		},
 		"sdk/design-systems": {
-			"sha256": "aa6d412dbf63754bdfd606775bdac86ae1b93ce633a371461c6ce5208ce75d38",
-			"characters": 3291
+			"sha256": "3443c50af8fbec7068e3caac50926ab2a76d8133999523e9140c37b3a8125705",
+			"characters": 3311
 		},
 		"sdk/download-artifacts": {
-			"sha256": "c16af6335f905f830cf94ba36383159602585f788ce2ffa08549426045f6b125",
-			"characters": 1702
+			"sha256": "15c02e0a4a31a830ac4c532bed76cde6e5afb8f011e106eea303fd8732941d9e",
+			"characters": 1703
 		},
 		"sdk/edit-screen": {
-			"sha256": "530a69493e2a4f2f15fc2bdd6dae570c1134c1bab32dae4e19c728051a07deef",
-			"characters": 1304
+			"sha256": "85ec2071ac41295fd8d930ef8086317979b36fadc39546521ef0c88f604aa73b",
+			"characters": 1324
 		},
 		"sdk/extract-themes": {
-			"sha256": "532dcb43407b5f54a8b05f341534ae70bd7a7c8e7b0a2b1de1ee0428664656a5",
-			"characters": 1995
+			"sha256": "29029ca934447a9051fcd40d57cdf29c567cc53b2676a435bbeaee719650b656",
+			"characters": 1996
 		},
 		"sdk/generate-variants": {
-			"sha256": "076d5a76770760bc7ee1f61bfaa2f1122715f016f5440474fbc59d114e96113c",
-			"characters": 1379
+			"sha256": "a7cb1736b4102bb7b956bb3be95d5806e40d9cf473a831083041a04283c7cc82",
+			"characters": 1399
 		},
 		"sdk/reference": {
-			"sha256": "2300606cbd049c1af9cf0a911139b6c3aa054ce8c3274ca0746658b10311091c",
-			"characters": 7589
+			"sha256": "712664b7bd37e3d196f3ad233aa3359fd36db3f27689c10393ede27c14f3fe6c",
+			"characters": 7590
 		},
 		"sdk/tutorial": {
-			"sha256": "ef72a9709c79e9a5dbc9843e4f22975be404568ca347f4c618977b24b10125a8",
-			"characters": 2640
+			"sha256": "d6161ca005fb7de0f3b37cc66dd4b20bf59e0f53e082158a4e5d9d3649fd573f",
+			"characters": 2879
 		},
 		"sdk/upload-image": {
-			"sha256": "9681fce5b2227125280a14c0008993bdbf47bbe6587606518143b8a622da4e72",
-			"characters": 2453
+			"sha256": "305a94cd13f9ede03eb57f4f3316d3e8f8fb5707350f6ddb48c6bc03513a4fa8",
+			"characters": 2454
 		},
 		"skills/build-in-a-loop": {
-			"sha256": "d6280d3e691a307b3f39f4a8b440f2409c8cb4a066f94f7b39bd6ee25a0f3a4f",
-			"characters": 3291
+			"sha256": "e6f74d7c0d536ddbba786b701aa9bc35fa3e79a246c50d20300fcb96c42b08dd",
+			"characters": 3292
 		},
 		"skills/get-started": {
-			"sha256": "e1ea06ae82549a0ccd6eade5e1eedad29b237bb1477ade770cf7d8e358bfb362",
-			"characters": 3636
+			"sha256": "ec1d45a357d76851d251a31f0843324519e9513cce4b3d54f489cfb5f9a70927",
+			"characters": 3837
 		},
 		"skills/reference": {
-			"sha256": "0f760a60d50c9e950a7d7400b05b1259ab3dd323f1f7514affc815126de43b64",
-			"characters": 4527
+			"sha256": "ef89ed5ab3068f9c51be641097d493ec5e9601f74a58df9349d19da12a323772",
+			"characters": 4689
 		},
 		"skills/roundtrip": {
-			"sha256": "8e2ab2667b0648d2268eb341e4b66c20b05a088682f879fbc8c1b883ea08ca71",
-			"characters": 3992
+			"sha256": "25578411a3802626b65675ce461cc8eaa4dd07eaecdc30a9022a94c50b6a7380",
+			"characters": 4216
 		},
 		"skills/taste": {
-			"sha256": "2ba12a0500da4e50778685f54e68cef6b6da9f1053aa7e341686760bdb9e7990",
-			"characters": 4189
+			"sha256": "7738f38956f83c7041f86ac6b7cdf93b3afce723679b3dd828ea08900bf964c9",
+			"characters": 4229
 		},
 		"skills/walkthrough-videos": {
-			"sha256": "183efa36f2f2b5a2ad787fff90e7cbe97c68831f596189484cacf6df3eb96b9a",
-			"characters": 2699
+			"sha256": "040e96bdb3348368149ad9ea5c7c98857b170925669efe10309e119237e08fd4",
+			"characters": 2700
 		}
 	}
 }

@@ -1,0 +1,79 @@
+name: Check the sources
+
+# Compares the official Stitch docs with what the pages of this site were written from
+# (scripts/upstream.mjs, upstream/README.md). It changes no page: a difference opens or
+# updates one issue, and the issue closes when a later run finds none.
+
+on:
+  schedule:
+    # Mondays 06:37 in Taipei (Sundays 22:37 UTC). Off the hour: runs at :00 are often late.
+    - cron: '37 22 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: upstream
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # Exit 0: no difference. 1: differences. Anything else: the check was not made, and
+      # the job fails here, before the issue is touched.
+      - id: check
+        run: |
+          set +e
+          node scripts/upstream.mjs > report.txt 2>&1
+          code=$?
+          cat report.txt
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          [ "$code" -le 1 ]
+      # Only for the default branch: a run on another branch says nothing about the live pages.
+      - name: Open, update or close the issue
+        if: github.event_name == 'schedule' || github.ref_name == github.event.repository.default_branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          CODE: ${{ steps.check.outputs.code }}
+          OWNER: ${{ github.repository_owner }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          gh label create upstream --color 5319e7 --description 'The sources differ from what the pages were written from' --force
+          number=$(gh issue list --label upstream --state open --json number --jq '.[0].number // empty')
+          if [ "$CODE" = 0 ]; then
+            if [ -n "$number" ]; then gh issue close "$number" --comment "No difference in the run of $(date -u +%F): $RUN_URL"; fi
+            exit 0
+          fi
+          {
+            echo 'The sources differ from what the pages of this site were written from. `upstream/README.md` says what to do with each line; run `pnpm upstream` for the present state.'
+            echo
+            echo '```text'
+            cat report.txt
+            echo '```'
+          } > body.md
+          if [ -z "$number" ]; then
+            gh issue create --title 'Sources changed' --label upstream --assignee "$OWNER" --body-file body.md
+            exit 0
+          fi
+          # The body always shows the newest report. A comment, which notifies, is added only
+          # when a line other than a note is added or removed.
+          key() { grep -E '^[a-z][^:]*: ' | grep -v '^note: ' | sort || true; }
+          gh issue view "$number" --json body --jq .body | tr -d '\r' > old.md
+          gh issue edit "$number" --body-file body.md
+          if [ "$(key < old.md)" != "$(key < body.md)" ]; then
+            gh issue comment "$number" --body "The differences changed in the run of $(date -u +%F): $RUN_URL"
+          fi
