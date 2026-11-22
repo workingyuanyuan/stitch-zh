@@ -13,7 +13,7 @@ sources:
 
 ## 這是哪一個伺服器
 
-本頁的工具來自 Stitch CLI 本身內建的 MCP 伺服器，由 `stitch mcp start` 在本機透過 stdio 啟動，或由 `stitch mcp install` 註冊到 AI 編輯器。遠端 Stitch MCP 服務是另一個伺服器，工具清單不同，見 [MCP 參考](/mcp/reference/)。
+這些工具來自 Stitch CLI 本身內建的 MCP 伺服器，由 `stitch mcp start` 在本機透過 stdio 啟動，或由 `stitch mcp install` 註冊到 AI 編輯器。遠端 Stitch MCP 服務是另一個伺服器，工具清單不同，見 [MCP 參考](/mcp/reference/)。
 
 自行設定 MCP 用戶端時，把它指向 `stitch mcp start`：
 

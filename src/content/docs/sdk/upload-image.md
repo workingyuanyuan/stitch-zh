@@ -125,4 +125,4 @@ for (const file of files) {
 | --- | --- | --- | --- |
 | `upload()` 的回傳型別 | `Promise<UploadResult>`：`{ success: true, screens }` 或 `{ success: false, error }` | `Promise<Screen[]>`（`project-ext.d.ts` 第 24 行） | `Promise<Screen[]>`（`project-ext.d.ts` 第 24 行） |
 | 失敗時 | 從不丟出例外，回傳 `success: false` | `project.upload()` 的宣告沒有寫；回傳 `UploadResult`、「never throws」的是內部的 `UploadHandler.execute()`（`upload-handler.d.ts` 第 5、10 行）；README 寫 domain 類別的方法失敗時丟出 `StitchError` | 同 0.3.5 |
-| `UploadResult` 型別 | 本頁的回傳值 | 有匯出這個型別（`dist/src/index.d.ts`），但不是 `project.upload()` 的回傳型別 | 同 0.3.5 |
+| `UploadResult` 型別 | `upload()` 的回傳值 | 有匯出這個型別（`dist/src/index.d.ts`），但不是 `project.upload()` 的回傳型別 | 同 0.3.5 |

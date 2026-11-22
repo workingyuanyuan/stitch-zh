@@ -92,7 +92,7 @@ Skills 遵循 [Agent Skills](https://agentskills.io) 開放標準，可以用在
 npx plugins add google-labs-code/stitch-skills --scope project --target claude-code
 ```
 
-`--target` 依你用的 agent 換成 `cursor` 或 `gemini-cli`。這一頁的 Stitch 文件也列出 `antigravity`，但 [Agent Skills 入門](/skills/get-started/) 寫明 `plugins` CLI 目前還不支援 Antigravity 當 target，用 Antigravity 時要改用那一頁的個別安裝方式。
+`--target` 依你用的 agent 換成 `cursor` 或 `gemini-cli`。Stitch 文件也列出 `antigravity`，但 [Agent Skills 入門](/skills/get-started/) 寫明 `plugins` CLI 目前還不支援 Antigravity 當 target，用 Antigravity 時要改用那一頁的個別安裝方式。
 
 ### 從原始碼擷取：extract-design-md
 

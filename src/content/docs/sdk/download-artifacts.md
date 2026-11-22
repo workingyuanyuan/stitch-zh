@@ -92,7 +92,7 @@ console.log(`Downloaded ${screens.length} screens to ${outDir}`);
 
 ## 和已發布套件的差異
 
-本頁的程式碼在兩版都能執行。
+上面的程式碼在兩版都能執行。
 
 | 項目 | Stitch 文件 | 0.3.5（latest） | 0.4.0（next） |
 | --- | --- | --- | --- |

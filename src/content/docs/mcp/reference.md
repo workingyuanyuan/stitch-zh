@@ -11,9 +11,9 @@ sources:
     url: https://stitch.google.com/docs/mcp/setup/
 ---
 
-## 這一頁說的是哪個伺服器
+## 這是哪一個伺服器
 
-這一頁列的是遠端 Stitch MCP 服務的工具，也就是 MCP 用戶端連到 `https://stitch.googleapis.com/mcp` 時可用的工具，連線方式見 [MCP 設定與驗證](/mcp/setup/)。Stitch CLI 內建的 MCP 伺服器另有自己的工具參考，見 [CLI 內建 MCP 伺服器的工具](/cli/reference/mcp-tools/)。
+這些是遠端 Stitch MCP 服務的工具，也就是 MCP 用戶端連到 `https://stitch.googleapis.com/mcp` 時可用的工具，連線方式見 [MCP 設定與驗證](/mcp/setup/)。Stitch CLI 內建的 MCP 伺服器另有自己的工具參考，見 [CLI 內建 MCP 伺服器的工具](/cli/reference/mcp-tools/)。
 
 ## 工具一覽
 

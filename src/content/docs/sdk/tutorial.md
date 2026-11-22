@@ -17,7 +17,7 @@ sources:
     url: https://unpkg.com/@google/stitch-sdk@0.4.0/dist/src/screen-ext.d.ts
 ---
 
-## 這一頁做出什麼
+## 做出什麼
 
 一支 TypeScript 腳本：建立專案、產生一個畫面，再取得這個畫面的 HTML 與圖片網址。SDK 不需要 MCP 設定檔，也不需要先裝 CLI，安裝套件就能用。
 
@@ -25,7 +25,7 @@ sources:
 
 ## SDK 版本
 
-Stitch 文件沒有寫它對應哪一版 SDK。本站對照了 npm 上的兩個版本：
+Stitch 文件沒有寫它對應哪一版 SDK。npm 上有兩個版本：
 
 | 版本 | npm 標籤 | 發布日期 |
 | --- | --- | --- |

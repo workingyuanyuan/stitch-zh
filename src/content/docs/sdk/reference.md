@@ -59,7 +59,7 @@ sources:
 npm install @google/stitch-sdk
 ```
 
-Stitch 文件沒有寫它對應哪一版 SDK。本頁對照了 npm 上的兩版：`0.3.5`（`latest`，2026-05-12 發布，預設安裝這版）與 `0.4.0`（`next`，2026-10-01 發布，用 `npm install @google/stitch-sdk@next` 安裝）。下面的表格依 Stitch 文件整理，已發布套件不同的地方在表格裡註明，完整列在文末的「和已發布套件的差異」。
+Stitch 文件沒有寫它對應哪一版 SDK。npm 上有兩版：`0.3.5`（`latest`，2026-05-12 發布，預設安裝這版）與 `0.4.0`（`next`，2026-10-01 發布，用 `npm install @google/stitch-sdk@next` 安裝）。已發布套件和 Stitch 文件不同的地方在表格裡註明，完整列在「和已發布套件的差異」。
 
 主套件 `@google/stitch-sdk` 的匯出：
 

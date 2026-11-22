@@ -2,7 +2,7 @@
 title: Stitch 中文教學
 description: Google Stitch 的繁體中文教學：網頁版入門，以及 CLI、MCP、SDK、DESIGN.md 與 Agent Skills。
 appliesTo: Stitch 網頁版、CLI、MCP、SDK、DESIGN.md 與 Agent Skills（2026-11-20）
-caveat: 本站不是 Google 的網站；內容依據 2026-11-20 的 Stitch 英文文件寫成，功能與名稱以 stitch.google.com 為準。
+caveat: 功能、名稱與上限為 2026-11-20 的 Stitch；Stitch 仍在更新，以 stitch.google.com 為準。
 lastVerified: 2026-11-20
 sources:
   - title: Stitch Docs（英文）
@@ -72,7 +72,3 @@ Show this weekend's hike at the top, then three more upcoming hikes and a button
 ```
 
 這段提示詞的三行分別是：台北登山社團「Ridge Line」需要一個首頁、沉穩的戶外風格與深綠配米白的配色、頁面最上方放本週的活動，接著是另外三場活動和加入按鈕。各部分的寫法見[快速上手](/learn/overview/)。
-
-## 名稱的寫法
-
-Stitch 介面上的名稱、快捷鍵與提示詞範例，在本站以英文呈現，例如 `Edit Theme`、`Creative Range`。名稱後面括號裡的中文是說明。
