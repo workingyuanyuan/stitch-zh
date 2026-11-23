@@ -1,6 +1,6 @@
 ---
 // Override of Starlight's MarkdownContent: the one-sentence answer above the page body,
-// and the page notes (scope, caveat, date, sources) after it, all in the same
+// and the page notes (scope, caveat, date, sources, other formats) after it, all in the same
 // container as the body. Extractors that keep only the main article (Readability and
 // the like) would drop them anywhere else.
 // The same frontmatter fields also produce the Markdown twin (src/lib/page-md.mjs)
@@ -59,6 +59,8 @@ const agentNote = hasFacts
 	</dd>
 	<dt>{t.markdown}</dt>
 	<dd><a href={withBase(mdPath(id))}>{mdPath(id)}</a></dd>
+	<dt>{t.allPages}</dt>
+	<dd class="outputs"><a href={withBase(llmsPath(locale))}>{llmsPath(locale)}</a>、<a href={withBase('/index.json')}>/index.json</a></dd>
 </dl>}
 </div>
 

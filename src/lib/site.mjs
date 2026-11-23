@@ -214,7 +214,6 @@ export const LABELS = {
 		sources: '出處',
 		markdown: 'Markdown',
 		unofficial: '非官方',
-		formats: '機器可讀格式',
 		sections: '章節',
 		page: '頁面',
 		otherLanguage: '其他語言',

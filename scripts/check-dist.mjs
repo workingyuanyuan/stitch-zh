@@ -16,8 +16,9 @@
 //  8. llms.txt: notes, bundles and other languages within the first 5,000 characters.
 //  9. The 404 page links each language's home page and page list.
 // 10. robots.txt names the sitemap and carries a Content-Signal line.
-// Header and page text: the header links the twin, llms.txt and index.json with key hints
-//     drawn by CSS; no text in <main> is about the site or the page (scripts/check-page-text.mjs).
+// Header and page text: the header links the first page of each section (SECTIONS, the
+//     section tabs of the sidebar) in order; the page notes link the Markdown twin, llms.txt
+//     and index.json; no text in <main> is about the site or the page (scripts/check-page-text.mjs).
 // Being found: title, description, canonical, hreflang and sitemap (scripts/check-found.mjs).
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
@@ -30,7 +31,7 @@ import { SITE, LOCALES, LLMS_NOTES, SECTIONS, sectionPages, localeOf, htmlPath, 
 import { bundlePath } from '../src/lib/llms.mjs';
 import { readPages } from '../src/lib/content-index.mjs';
 import { checkFound } from './check-found.mjs';
-import { checkHeaderLinks, checkKeyHintCss, checkSelfReference } from './check-page-text.mjs';
+import { checkHeaderAndOutputs, checkSelfReference } from './check-page-text.mjs';
 
 const DIST = fileURLToPath(new URL('../dist/', import.meta.url));
 const LIMIT = 5000;
@@ -195,9 +196,13 @@ for (const { id, data } of pages) {
 		}
 	}
 
-	// Header links and page text (scripts/check-page-text.mjs): the header links the twin,
-	// llms.txt and index.json, and no text in <main> is about the site or the page.
-	checkHeaderLinks(doc, id, fail, { markdown: withBase(mdPath(id)), llms: withBase(llmsPath(localeOf(id))), json: withBase('/index.json') });
+	// Header, page notes and page text (scripts/check-page-text.mjs): the header links the
+	// sections in the sidebar's order, the page notes link the twin, llms.txt and index.json,
+	// and no text in <main> is about the site or the page.
+	checkHeaderAndOutputs(doc, id, fail, {
+		sections: SECTIONS.map((s) => withBase(htmlPath(sectionPages(s)[0]))),
+		outputs: [withBase(mdPath(id)), withBase(llmsPath(localeOf(id))), withBase('/index.json')],
+	});
 	checkSelfReference(doc, id, fail);
 
 	// 5. No decoration leak into extracted text.
@@ -206,7 +211,6 @@ for (const { id, data } of pages) {
 		// Add a pattern here for every piece of text the skin draws with CSS `content`.
 		['list or table marker drawn by the skin', /[◆▶■█▮]\s/],
 		['prompt label drawn by the skin', /\bPROMPT\b/],
-		['bracketed key hint', /\[[A-Z]\]\s?[A-Za-z]/],
 	]) {
 		if (pattern.test(visible)) fail(id, `decoration leaked into page text: ${name}`);
 	}
@@ -249,9 +253,6 @@ for (const locale of LOCALES) {
 const robots = existsSync(join(DIST, 'robots.txt')) ? read('robots.txt') : '';
 if (!robots.includes(`Sitemap: ${SITE}/sitemap-index.xml`)) fail('robots.txt', 'missing or without the sitemap');
 if (!/^Content-Signal: /m.test(robots)) fail('robots.txt', 'no Content-Signal line');
-
-// The key hints of the header links ([M], [L], [J]) are drawn by the built CSS.
-checkKeyHintCss(DIST, fail);
 
 checkFound(DIST, pages, fail);
 

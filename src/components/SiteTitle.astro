@@ -1,42 +1,32 @@
 ---
 // Override of Starlight's SiteTitle: the site name as text, a pill that says the site
-// is not the publisher's, and links to the machine-readable outputs of the current page.
+// is not the publisher's, and a link to the first page of each section (the section tabs
+// of the sidebar, `SECTIONS` in src/lib/site.mjs), in the sidebar's order and labels.
 // The official docs show the Stitch wordmark and a "BETA" pill here; this site borrows the
-// layout, not the logo. The bracketed key hints before the links are drawn by CSS
-// (`[data-key]::before`), so they never reach the text an agent extracts from the page.
-import { LABELS, localeOf, pageId, mdPath, llmsPath, withBase } from '../lib/site.mjs';
+// layout, not the logo. The Markdown twin, llms.txt and index.json are linked from the
+// page notes (MarkdownContent.astro).
+import { SECTIONS, LABELS, localeOf, pageId, sectionPages, sectionOf, htmlPath, withBase } from '../lib/site.mjs';
 
 const { siteTitle, siteTitleHref, entry } = Astro.locals.starlightRoute;
-const locale = localeOf(entry.id);
-const t = LABELS[locale.lang];
-const links = [
-	...(entry.data.lastVerified ? [{ key: 'M', label: 'Markdown', href: withBase(mdPath(pageId(entry.id))) }] : []),
-	{ key: 'L', label: 'llms.txt', href: withBase(llmsPath(locale)) },
-	{ key: 'J', label: 'index.json', href: withBase('/index.json') },
-];
+const t = LABELS[localeOf(entry.id).lang];
+// The sidebar of a page holds only its own section (src/routeData.ts), so the sections
+// come from SECTIONS, as the section tabs in the Sidebar override do.
+const current = sectionOf(pageId(entry.id));
 ---
 
 <a href={siteTitleHref} class="site-title" translate="no">
 	<span class="name">{siteTitle}</span>
 	<span class="pill">{t.unofficial}</span>
 </a>
-<nav class="outputs" aria-label={t.formats}>
-	{links.map((link) => <a href={link.href} data-key={link.key} aria-keyshortcuts={link.key.toLowerCase()}>{link.label}</a>)}
+<nav class="sections" aria-label={t.sections}>
+	{
+		SECTIONS.map((section) => (
+			<a href={withBase(htmlPath(sectionPages(section)[0]))} aria-current={section === current ? 'true' : undefined}>
+				{section.label}
+			</a>
+		))
+	}
 </nav>
-
-<script is:inline>
-	// Single-key shortcuts for the links above. Ignored while typing or with modifier keys.
-	document.addEventListener('keydown', (event) => {
-		if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey) return;
-		const target = event.target;
-		if (target instanceof HTMLElement) {
-			if (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName)) return;
-		}
-		if (document.querySelector('dialog[open]')) return;
-		const link = document.querySelector(`nav.outputs a[data-key="${event.key.toUpperCase()}"]`);
-		if (link instanceof HTMLAnchorElement) link.click();
-	});
-</script>
 
 <style>
 	.site-title {
@@ -62,7 +52,7 @@ const links = [
 		letter-spacing: 0.02em;
 		line-height: 1.4;
 	}
-	.outputs {
+	.sections {
 		display: none;
 		gap: 1.25rem;
 		margin-inline-start: 1.5rem;
@@ -71,22 +61,21 @@ const links = [
 		white-space: nowrap;
 	}
 	@media (min-width: 72rem) {
-		.outputs {
+		.sections {
 			display: flex;
 			align-items: center;
 		}
 	}
-	.outputs a {
+	.sections a {
 		color: var(--sl-color-gray-3);
 		text-decoration: none;
 	}
-	.outputs a::before {
-		content: '[' attr(data-key) '] ';
-		color: var(--sl-color-text-accent);
-		font-family: var(--sl-font-mono);
+	/* The section of the current page, as the section tabs mark it. */
+	.sections a[aria-current] {
+		color: var(--sl-color-white);
 	}
-	.outputs a:hover,
-	.outputs a:focus-visible {
+	.sections a:hover,
+	.sections a:focus-visible {
 		color: var(--sl-color-white);
 	}
 	@media (max-width: 24rem) {
