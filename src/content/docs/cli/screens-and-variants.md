@@ -56,7 +56,7 @@ stitch generate screen \
 
 ### 指令結束時畫面還沒好
 
-指令回傳時 Stitch 可能還在產生畫面。在互動式終端機裡，CLI 會在背景繼續檢查，下次執行任何 `stitch` 指令時印出 `Screen <id> is ready` 和畫面的連結。
+在互動式終端機裡，CLI 會在背景繼續檢查，下次執行任何 `stitch` 指令時印出 `Screen <id> is ready` 和畫面的連結。
 
 | 情況 | 怎麼知道畫面好了 |
 | --- | --- |
@@ -133,5 +133,3 @@ stitch serve
 stitch download screen <screen-id> --output ./screens/revenue-overview.html
 stitch open screen <screen-id>
 ```
-
-結合自己的圖、`stitch serve` 與互動修改的完整流程，見[和 coding agent 反覆修改](/cli/agent-bridge/)。

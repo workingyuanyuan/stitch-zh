@@ -11,7 +11,7 @@ sources:
 
 ## taste-design 解決什麼問題
 
-AI 產生的介面常常長得一樣：過度飽和的紫色漸層、置中的三欄卡片、`Inter` 字體、捏造的統計數字。`taste-design` 產生的設計系統明文禁止這些樣式，並套用一套高標準的規則。
+`taste-design` 禁止的樣式，是 AI 產生的介面常見的那些：過度飽和的紫色漸層、置中的三欄卡片、`Inter` 字體、捏造的統計數字。
 
 這個 Skill 由社群成員 Leon Lin 貢獻，原始儲存庫是 [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill)。
 

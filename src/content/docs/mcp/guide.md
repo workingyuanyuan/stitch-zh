@@ -2,18 +2,18 @@
 title: MCP 使用指南
 description: 在 coding agent 裡用 Stitch MCP 查專案、下載 HTML 與圖片，再用 Agent Skill 轉成 React。
 appliesTo: Stitch MCP（2026-11-20）
-caveat: Stitch MCP 整合的是支援遠端 HTTP MCP 伺服器的 coding agent；照這份指南操作前，要先完成驗證。
+caveat: Stitch MCP 整合的是支援遠端 HTTP MCP 伺服器的 coding agent；使用前要先完成驗證。
 lastVerified: 2026-11-20
 sources:
   - title: Stitch Docs：Getting Started（MCP）
     url: https://stitch.google.com/docs/mcp/guide/
 ---
 
-## 這份指南做什麼
+## Stitch MCP 能做什麼
 
 Stitch MCP 把 Stitch 編輯器裡產生設計的能力帶進 IDE、CLI 或其他 AI 工具。在那裡可以產生新畫面，也可以把設計轉成程式碼，放進你的程式碼庫，用程式控制、自動化 Stitch。
 
-這份指南的目標：寫一個提示詞，從 Stitch 設計得到結構清楚的一組 [React](http://react.dev) 元件。
+一個提示詞就能讓 agent 把 Stitch 設計轉成結構清楚的一組 [React](http://react.dev) 元件，agent 依序執行這些步驟：
 
 | 步驟 | 做什麼 |
 | --- | --- |

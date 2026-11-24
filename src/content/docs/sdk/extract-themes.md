@@ -15,7 +15,7 @@ sources:
 
 ## HTML 裡有什麼
 
-每個 Stitch 畫面產生的 HTML 文件都內嵌 Tailwind 設定與 Google Fonts 連結；設計有用到 Material Design 圖示時，也有 Material Symbols 的參照。取出後可以在自己的專案沿用同一套設計樣式。
+每個 Stitch 畫面產生的 HTML 文件都內嵌 Tailwind 設定與 Google Fonts 連結；設計有用到 Material Design 圖示時，也有 Material Symbols 的參照。
 
 | 項目 | 在 HTML 裡的位置 | 取得的內容 |
 | --- | --- | --- |

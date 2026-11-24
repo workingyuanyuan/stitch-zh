@@ -24,7 +24,7 @@ sources:
 
 所有指令都接受檔案路徑，或用 `-` 從標準輸入讀取，輸出預設是 JSON。例外是 `spec`：它的選項表沒有輸入檔，`--format` 預設是 `markdown`。
 
-Stitch 文件與儲存庫 `google-labs-code/design.md` 的 README（commit `db977b3`）有幾處不一致，整理在最後的[差異表](#stitch-文件與儲存庫-readme-的差異)。README 寫明 CLI 還在積極開發，會隨格式改變。
+Stitch 文件與儲存庫 `google-labs-code/design.md` 的 README（commit `db977b3`）有幾處不一致。在這個 commit，CLI 標示為積極開發中，會隨格式改變。
 
 ## 安裝
 
@@ -178,7 +178,7 @@ npx @google/design.md export --format dtcg DESIGN.md > tokens.json
 
 ## spec：輸出規格
 
-輸出 DESIGN.md 的格式規格。把它放進給 agent 的提示詞裡，agent 就確切知道要產生什麼結構。
+把 `spec` 的輸出放進給 agent 的提示詞裡，agent 就確切知道要產生什麼結構。
 
 ```bash
 npx @google/design.md spec
@@ -191,8 +191,6 @@ npx @google/design.md spec --rules-only --format json
 | `--rules` | boolean | `false` | 在規格後面附上目前啟用的檢查規則表 |
 | `--rules-only` | boolean | `false` | 只輸出檢查規則表 |
 | `--format` | `markdown` 或 `json` | `markdown` | 輸出格式 |
-
-規格的內容見 [DESIGN.md 規格](/design-md/specification/)。
 
 ## 在程式裡使用
 
@@ -207,8 +205,6 @@ console.log(report.findings);      // Finding[]
 console.log(report.summary);
 console.log(report.designSystem);  // DesignSystemState
 ```
-
-報告欄位見下方差異表。
 
 ## Stitch 文件與儲存庫 README 的差異
 

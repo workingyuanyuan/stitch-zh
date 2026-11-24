@@ -1,8 +1,8 @@
 ---
 title: Stitch 中文教學
-description: Google Stitch 的繁體中文教學：網頁版入門，以及 CLI、MCP、SDK、DESIGN.md 與 Agent Skills。
+description: Google Stitch 是 Google 的 AI 介面設計工具，也能從 CLI、MCP、SDK 與 Agent Skills 操作。
 appliesTo: Stitch 網頁版、CLI、MCP、SDK、DESIGN.md 與 Agent Skills（2026-11-20）
-caveat: 功能、名稱與上限為 2026-11-20 的 Stitch；Stitch 仍在更新，以 stitch.google.com 為準。
+caveat: 功能、名稱與上限為 2026-11-20 的 Stitch；Stitch 仍在更新，之後的版本會有變動。
 lastVerified: 2026-11-20
 sources:
   - title: Stitch Docs（英文）
@@ -11,13 +11,13 @@ sources:
     url: https://stitch.google.com/
 ---
 
-Stitch 是 Google 的 AI 介面設計工具。輸入一段提示詞，它會產生網頁或 App 的畫面設計；之後用對話逐步修改，最後下載成 HTML 程式碼與圖片。開發者還可以從終端機、coding agent 或自己的程式操作 Stitch。
+## Stitch 是什麼
+
+輸入一段提示詞，Stitch 會產生網頁或 App 的畫面設計；之後用對話逐步修改，最後下載成 HTML 程式碼與圖片。
 
 ## Stitch 入門
 
-在瀏覽器裡使用 Stitch，依這個順序讀。
-
-| 順序 | 頁面 | 學到什麼 |
+| 順序 | 主題 | 內容 |
 | --- | --- | --- |
 | 1 | [快速上手](/learn/overview/) | 從第一個提示詞到下載成果的完整流程 |
 | 2 | [提示詞寫法](/learn/prompting/) | 起頭、定調、逐個畫面修改、控制主題與圖片 |
@@ -71,4 +71,4 @@ The mood is calm and outdoorsy: deep green on off-white, with plenty of space.
 Show this weekend's hike at the top, then three more upcoming hikes and a button to join.
 ```
 
-這段提示詞的三行分別是：台北登山社團「Ridge Line」需要一個首頁、沉穩的戶外風格與深綠配米白的配色、頁面最上方放本週的活動，接著是另外三場活動和加入按鈕。各部分的寫法見[快速上手](/learn/overview/)。
+這段提示詞的三行分別是：台北登山社團「Ridge Line」需要一個首頁、沉穩的戶外風格與深綠配米白的配色、頁面最上方放本週的活動，接著是另外三場活動和加入按鈕。

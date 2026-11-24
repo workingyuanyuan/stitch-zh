@@ -1,6 +1,6 @@
 ---
 title: Skill 一覽
-description: Stitch Design Skills 全部 13 個 Skill 的用途、範例與依賴，分屬三個外掛。
+description: Stitch Design Skills 的 13 個 Skill 分屬三個外掛，部分 Skill 要搭配其他 Skill 才能用。
 appliesTo: Stitch Agent Skills（2026-11-20）
 caveat: 很多 Skill 互相依賴，例如 code-to-design 需要另外三個 Skill；只裝部分 Skill 前先查好依賴，否則建議安裝完整外掛套件。
 lastVerified: 2026-11-20
@@ -11,7 +11,7 @@ sources:
 
 ## 全部 Skill
 
-Stitch Design Skills 分成三個外掛。每個 Skill 都遵循 [Agent Skills](https://agentskills.io) 開放標準，相容的 coding agent 都能使用。安裝方法見[開始使用 Agent Skills](/skills/get-started/)。
+每個 Skill 都遵循 [Agent Skills](https://agentskills.io) 開放標準，相容的 coding agent 都能使用。
 
 | 外掛 | Skill | 用途 |
 | --- | --- | --- |

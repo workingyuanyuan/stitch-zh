@@ -2,7 +2,7 @@
 title: 和 coding agent 反覆修改
 description: 先上傳自己的圖當視覺基準，再明確設定構圖，最後在 localhost 加上互動。
 appliesTo: Stitch CLI（2026-11-20）
-caveat: 要讓 Stitch 原樣嵌入你上傳的圖，記載的做法是把它的託管網址寫進提示詞，或直接對上傳的畫面執行 stitch edit screen。
+caveat: 要讓 Stitch 原樣嵌入你上傳的圖，做法是把它的託管網址寫進提示詞，或直接對上傳的畫面執行 stitch edit screen。
 lastVerified: 2026-11-20
 sources:
   - title: Stitch Docs：Iterate with Coding Agents
@@ -122,9 +122,9 @@ stitch edit screen <screen-id> \
 
 ## 繼續修改
 
-流程就是這樣：用真實素材當基準，用清楚的限制設定構圖，在 `localhost` 測試互動狀態。設計滿意後，把 HTML 拉進程式碼庫，或繼續一次改一步。
+設計滿意後，把 HTML 拉進程式碼庫，或繼續一次改一步。
 
-| 下一步 | 頁面 |
+| 想做的事 | 做法 |
 | --- | --- |
 | 從 CLI 產生變化版本、精準修改 | [產生與修改畫面](/cli/screens-and-variants/) |
 | 讓本機的 `DESIGN.md` 和 Stitch 專案保持同步 | [同步設計系統](/cli/design-systems/) |

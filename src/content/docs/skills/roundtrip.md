@@ -77,7 +77,7 @@ Make a Stitch project named "Bento Shop Refresh", use .stitch/DESIGN.md as its d
 
 這段提示詞請 agent 建立名為 Bento Shop Refresh 的 Stitch 專案，以 `.stitch/DESIGN.md` 為設計系統，並把 `.stitch/designs/` 裡的每個 HTML 檔匯入成畫面。
 
-這個 Skill 會建立專案，把 DESIGN.md 上傳成設計系統，再把每個 HTML 檔匯入成一個畫面。打開 [Stitch](https://stitch.google.com) 就能看到專案，每個畫面都套用了設計系統。
+打開 [Stitch](https://stitch.google.com) 就能看到專案，每個畫面都套用了設計系統。
 
 ## 步驟 4：修改設計
 
@@ -114,7 +114,7 @@ Pull the latest screens from my Stitch project and rebuild this app's pages from
 
 ## 下一步
 
-| 想做的事 | 頁面 |
+| 想做的事 | 做法 |
 | --- | --- |
 | 擷取設計系統的其他方法，包括不需要 Skill 的提示詞 | [從程式碼匯入](/design-md/get-instructions/) |
 | 產生避開 AI 常見樣式的設計系統 | [Taste：taste-design](/skills/taste/) |

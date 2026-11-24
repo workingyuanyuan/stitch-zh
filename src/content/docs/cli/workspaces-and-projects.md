@@ -111,5 +111,3 @@ stitch connect --list
 stitch connect <catalog-id>
 stitch find connections
 ```
-
-下一步：[設定 loop 與背景資料](/cli/priorities-and-context/)。

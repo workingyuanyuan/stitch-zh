@@ -316,7 +316,7 @@ gemini extensions install https://github.com/gemini-cli-extensions/stitch
 
 ## 連線後可用的工具
 
-驗證完成後，AI 助理可以用下列工具管理 Stitch 工作。完整結構與欄位見 [Stitch MCP 工具參考](/mcp/reference/)，那一頁另外列出兩個 DESIGN.md 工具。
+驗證完成後，AI 助理可以用下列工具管理 Stitch 工作。服務另外還有兩個 [DESIGN.md 工具](/mcp/reference/)。
 
 | 分類 | 工具 | 用途 | 主要參數 |
 | --- | --- | --- | --- |

@@ -11,7 +11,7 @@ sources:
 
 ## 起頭：概略或詳細
 
-可以從一個大方向開始，也可以一開始就寫出細節。App 比較複雜時，先寫概略的版本，再逐個畫面補細節。
+App 比較複雜時，先寫概略的版本，再逐個畫面補細節。
 
 概略的寫法只給一個想法：
 
@@ -116,7 +116,7 @@ Switch the theme to soft blue, and recolor the photos and icons to match.
 
 ## 更換介面文字的語言
 
-用一個提示詞就能把商品文案和按鈕文字換成另一種語言。Stitch 文件的範例是換成西班牙文（Spanish）；下面的提示詞把目標語言改成繁體中文：
+用一個提示詞就能把商品文案和按鈕文字換成另一種語言，例如繁體中文：
 
 ```text
 Translate every product description and button label in the app into Traditional Chinese.

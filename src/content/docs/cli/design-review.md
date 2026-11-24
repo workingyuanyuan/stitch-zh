@@ -13,7 +13,7 @@ sources:
 
 功能一路上線，實作很容易偏離設計系統：這裡換了字重，那裡多了一條不符合設計系統的卡片邊框，某個色碼被改成相近的值。
 
-設計審查拿正在執行的 App 和 [`DESIGN.md`](/cli/design-systems/) 比對。審查的每個步驟都在你的電腦上執行，不呼叫雲端。審查之後，可以選擇把快照上傳到 Stitch Canvas 試改。
+審查的每個步驟都在你的電腦上執行，不呼叫雲端。審查之後，可以選擇把快照上傳到 Stitch Canvas 試改。
 
 | 步驟 | 做法 |
 | --- | --- |
@@ -55,8 +55,6 @@ stitch capture http://localhost:5173/dashboard -o .stitch/captured-dom.html
 | `.stitch/captured-dom.html` | hydration 後的 DOM，含計算後樣式與結構標記 |
 | `.stitch/verify-capture.png` | `1280x800` 截圖，顯示視窗裡實際渲染的內容 |
 
-其他旗標見[擷取執行中的 App](/cli/capture-and-upload/)。
-
 截圖裡如果是登入畫面或擋住頁面的視窗，在 `chrome-devtools` CLI 操作的瀏覽器分頁裡直接登入，再照該分頁當下的樣子重新擷取，不重新載入頁面：
 
 ```bash
@@ -84,4 +82,4 @@ stitch upload screen .stitch/captured-dom.html \
   --title "Dashboard Current"
 ```
 
-接著用 `stitch edit screen` 或 `stitch generate variants` 在畫布上試不同的版面，再把選中的設計帶回程式碼庫。做法見[產生與修改畫面](/cli/screens-and-variants/)。
+接著用 `stitch edit screen` 或 `stitch generate variants` 在畫布上試不同的版面，再把選中的設計帶回程式碼庫。

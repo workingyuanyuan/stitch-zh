@@ -103,8 +103,6 @@ Viewers should always know how much of the video is left. Draw a slim bar that f
 
 ## 預覽與輸出
 
-先在瀏覽器裡的 Remotion Studio 預覽：
-
 ```text
 Before anything gets rendered, let me watch it in Remotion Studio.
 ```

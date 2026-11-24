@@ -34,7 +34,7 @@ npx plugins add google-labs-code/stitch-skills --scope project --target cursor
 npx plugins add google-labs-code/stitch-skills --scope project --target gemini-cli
 ```
 
-這會安裝三個外掛：`stitch-design`、`stitch-build`、`stitch-utilities`，合計 13 個 Skill。每個 Skill 的用途見 [Skill 一覽](/skills/reference/)。
+這會安裝三個外掛：`stitch-design`、`stitch-build`、`stitch-utilities`，合計 13 個 [Skill](/skills/reference/)。
 
 `plugins` CLI 目前還不支援把 Antigravity 當成 `--target`。用 Antigravity 時，改用下一節的個別安裝指令。
 
@@ -97,7 +97,7 @@ Now take the improved version you just wrote and turn it into a Stitch screen.
 
 ## 下一步
 
-| 想做的事 | 頁面 |
+| 想做的事 | 做法 |
 | --- | --- |
 | 從現有程式碼擷取 DESIGN.md | [從程式碼匯入](/design-md/get-instructions/) |
 | 把 React 應用程式匯入 Stitch，改完設計再匯出成元件 | [程式碼與設計來回轉換](/skills/roundtrip/) |

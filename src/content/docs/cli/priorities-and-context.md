@@ -115,5 +115,3 @@ stitch create context \
 
 stitch find contexts
 ```
-
-下一步：[從程式碼庫產生原型](/cli/codebase-prototyping/)。

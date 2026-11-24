@@ -26,8 +26,6 @@ sources:
 | 1. 上傳 | `project.uploadDesignMd(designMdBase64)` | base64 編碼的檔案內容 | 一個畫面實例（screen instance） |
 | 2. 建立 | `project.createDesignSystemFromDesignMd(selectedScreenInstance, deviceType?)` | 上一步的 `id` 與 `sourceScreen` | 設計系統 |
 
-格式說明見 [DESIGN.md 規格](/design-md/specification/)。
-
 這兩個方法只在 0.4.0（`next`）有，用 `npm install @google/stitch-sdk@next` 安裝。0.3.5（`latest`）沒有這兩個方法；它的 `callTool(name, args)` 接受任何工具名稱字串，文末「直接用 callTool」的寫法不依賴這兩個方法。
 
 ## 1. 上傳 DESIGN.md
@@ -143,7 +141,7 @@ const ds = await stitch.callTool("create_design_system_from_design_md", {
 | `ds.apply()` 回傳 | `Screen` 陣列 | `Promise<Screen[]>` | `Promise<Generation<Screen, ApplyDesignSystemResponse>>` |
 | `callTool()` | `callTool(name, params)` | `callTool<T>(name: string, args: Record<string, any>)`（`client.d.ts` 第 34 行） | 同 0.3.5 |
 
-## 接下來
+## 下一步
 
 - [DESIGN.md 規格](/design-md/specification/)：自己撰寫 `DESIGN.md` 的完整格式
 - [管理設計系統](/sdk/design-systems/)：建立、更新、列出、套用設計系統

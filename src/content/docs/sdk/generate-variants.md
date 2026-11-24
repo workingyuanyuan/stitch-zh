@@ -81,7 +81,7 @@ const variants = await screen.variants(
 | `creativeRange` | `REFINE`、`EXPLORE`、`REIMAGINE` | `"EXPLORE"` | 相較原設計的變動幅度：`REFINE` 是細微調整，`REIMAGINE` 是大幅改變 |
 | `aspects` | `LAYOUT`、`COLOR_SCHEME`、`IMAGES`、`TEXT_FONT`、`TEXT_CONTENT` | 全部 | 要變化哪些面向 |
 
-`variants()` 也接受選用的第三、四個參數 `deviceType` 與 `modelId`。完整型別見 [SDK 參考](/sdk/reference/)。
+`variants()` 也接受選用的第三、四個參數 `deviceType` 與 `modelId`。
 
 ## 和已發布套件的差異
 

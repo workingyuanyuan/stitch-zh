@@ -36,8 +36,6 @@ console.log(`Editing screen ${screen.id} in project ${project.id}`);
 
 ## 2. 修改
 
-把修改指示傳給 `screen.edit()`：
-
 ```ts
 const edited = await screen.edit("Night-shift baristas use this after dark: dim everything on the screen and let only the order buttons glow lantern orange");
 ```
@@ -74,8 +72,6 @@ const edited = await screen.edit(
 | --- | --- |
 | `deviceType` | `DEVICE_TYPE_UNSPECIFIED`、`MOBILE`、`DESKTOP`、`TABLET`、`AGNOSTIC` |
 | `modelId` | `MODEL_ID_UNSPECIFIED`、`GEMINI_3_PRO`、`GEMINI_3_FLASH`；已發布套件另有其他值，見下表 |
-
-完整型別見 [SDK 參考](/sdk/reference/)。
 
 ## 和已發布套件的差異
 

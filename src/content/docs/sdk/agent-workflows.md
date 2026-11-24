@@ -31,8 +31,6 @@ sources:
 
 ## 列出可用的工具
 
-查詢 Stitch MCP 伺服器提供哪些工具：
-
 ```ts
 import { stitch } from "@google/stitch-sdk";
 

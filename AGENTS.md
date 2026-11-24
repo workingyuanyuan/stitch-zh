@@ -27,6 +27,8 @@ pnpm verify              # build, then run the acceptance checks. Run this befor
 pnpm upstream            # compare the official docs with what the pages were written from (upstream/README.md)
 pnpm upstream:html       # save the text of the official rendered pages in cache/upstream-html/, for reading
 pnpm lint [dir ...]      # check content pages without building (frontmatter, links, fences, wording)
+node scripts/prose-review.mjs run      # after a build: a reader of another model reads the prose units not yet in the ledger
+node scripts/prose-review.mjs status   # after a build: count the prose units the ledger lacks (pnpm verify fails on any)
 pnpm preview             # serve dist/ at http://127.0.0.1:4401/stitch-zh/ with GitHub Pages style headers
 ```
 
@@ -86,6 +88,8 @@ Run `pnpm upstream`. What it watches, what each line of its report means and how
 | `scripts/lint-content.mjs` | Content checks that need no build |
 | `scripts/check-dist.mjs`, `scripts/preview.mjs` | Acceptance checks, local preview |
 | `src/lib/sitemap.mjs` | Sitemap options: `lastmod` of each page from `lastVerified` |
+| `scripts/check-page-text.mjs` | Checks called by `check-dist.mjs`: header links, format links in the page notes, text about the site or the page, a body that opens with a paragraph |
+| `scripts/prose-review.mjs`, `scripts/prose-rubric.md`, `scripts/prose-site.mjs`, `reviews/prose-ledger.json` | The prose ledger: every unit of the site's own prose read once against the rubric; the first two are shared unchanged between sites, `prose-site.mjs` holds this site's settings |
 | `scripts/check-found.mjs` | Checks called by `check-dist.mjs`: a title and description of its own for every page, canonical, `hreflang`, sitemap |
 | `tests/agent-eval/questions.json` | The site's question list: what readers ask, each with the expected answer and qualifier. The agent test and the search test draw from it |
 | `tests/agent-eval/` | Fetch tool, questions and method for the agent test |

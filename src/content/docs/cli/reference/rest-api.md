@@ -1,6 +1,6 @@
 ---
 title: REST API 參考
-description: Stitch v2alpha REST API 的端點查詢表，涵蓋 Workspace、loop、insight 與 solution。
+description: Stitch v2alpha REST API 管理 Workspace、loop、insight 與 solution。
 appliesTo: Stitch CLI（2026-11-20）
 caveat: 用 stitch api 呼叫這些端點前，要先在本機執行一次 stitch enable loop 開啟 Workspace 功能。
 lastVerified: 2026-11-20
@@ -15,7 +15,7 @@ sources:
 
 ## 這組 API 做什麼
 
-`v2alpha` REST API 是 Stitch Workspace 管理、程式碼 loop、insight 與 solution 背後的 API。下面的端點清單沒有 Canvas 專案或畫面的端點；那些用 `stitch find`、`stitch generate` 等資源指令操作，見 [CLI 指令參考](/cli/reference/commands/)。
+Stitch 文件列出的 `v2alpha` 端點沒有 Canvas 專案或畫面；專案與畫面用 `stitch find`、`stitch generate` 等[資源指令](/cli/reference/commands/)操作。
 
 ## 從 CLI 呼叫
 
@@ -48,7 +48,7 @@ stitch api -X POST workspaces/{workspace}/goals/suggest
 | `--force` | 不確認，直接執行 |
 | `--yes`、`-y` | 略過確認提示 |
 
-## 怎麼讀下面的表
+## 路徑參數、查詢參數與方法 ID
 
 - 路徑中的 `{workspace}`、`{goal}` 等段落是路徑參數，換成實際 ID。在參數表裡它們叫 `name`、`parent` 或 `user`，值是資源名稱，例如 `workspaces/{workspace}`；資源名稱不含 `:addRepository` 這類方法後綴，所以不一定等於完整路徑。
 - 「查詢參數」一欄只列路徑以外的參數；「—」表示沒有列出查詢參數。
@@ -271,4 +271,4 @@ stitch api -X POST workspaces/{workspace}/goals/suggest
 
 ## 完整欄位
 
-各端點的參數原文說明見 Stitch 文件的 [REST API](https://stitch.google.com/docs/cli/reference/rest-api/)。
+Stitch 文件的 [REST API](https://stitch.google.com/docs/cli/reference/rest-api/) 頁另有每個參數的英文說明。

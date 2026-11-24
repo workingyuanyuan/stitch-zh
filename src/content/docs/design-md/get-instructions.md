@@ -84,7 +84,7 @@ Spacing in DESIGN.md looks too tight. The ticket cards in app/ui/ use 24px gaps,
 | `stitch-build` | 把設計變成程式碼：React 元件、操作示範影片、shadcn/ui 整合 |
 | `stitch-utilities` | 提升品質：最佳化提示詞、進階設計系統、自動產生多個頁面 |
 
-Skills 遵循 [Agent Skills](https://agentskills.io) 開放標準，可以用在任何相容的 coding agent。更多說明見 [Agent Skills 入門](/skills/get-started/)。
+Skills 遵循 [Agent Skills](https://agentskills.io) 開放標準，可以用在任何相容的 coding agent。
 
 ### 安裝
 

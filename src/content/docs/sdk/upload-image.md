@@ -34,7 +34,7 @@ const html = await screen.getHtml();
 const imageUrl = await screen.getImage();
 ```
 
-這段程式碼依已發布套件的型別宣告撰寫：`upload()` 回傳建立的 `Screen` 陣列。Stitch 文件的寫法不同，見文末的差異表。
+已發布套件的型別宣告寫 `upload()` 回傳建立的 `Screen` 陣列；Stitch 文件則寫它回傳結果物件、從不丟出。
 
 SDK 從硬碟讀取檔案，直接送到 Stitch REST API，不必自己轉 base64，也不必開瀏覽器。這條路徑沒有輸出 token 數量的限制；由 agent 透過 MCP 呼叫傳送 base64 內容時，常卡在這個限制。
 

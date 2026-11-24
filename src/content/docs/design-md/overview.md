@@ -15,7 +15,7 @@ sources:
 
 每個專案都有自己的視覺識別：顏色、字體、間距、元件樣式。這些資訊通常放在 Figma 檔、品牌 PDF，或設計師的腦袋裡，AI agent 都讀不到。
 
-`DESIGN.md` 把設計系統寫成一份純文字文件，人和 agent 都能讀、修改，並依照它執行。它和 `README.md`、`AGENTS.md` 的分工如下：
+`DESIGN.md` 和 `README.md`、`AGENTS.md` 的分工：
 
 | 檔案 | 讀者 | 內容 |
 | --- | --- | --- |
@@ -36,7 +36,7 @@ Stitch 這類 design agent 讀了 `DESIGN.md` 之後，產生的每個畫面都�
 | YAML front matter | 機器可讀的 design token：精確的 hex 色碼、字體屬性、間距級距 | 讓 agent 拿到精確數值 |
 | Markdown 內文 | 人可讀的設計理由 | 告訴 agent 這些數值為什麼存在、怎麼用 |
 
-Stitch 文件把 token 放在 front matter；DESIGN.md 儲存庫 `google-labs-code/design.md` 的 README 另外允許把 token 寫成 `yaml` 程式碼區塊，穿插在各個 `##` 章節裡。README 也寫明格式版本是 `alpha`，還在積極開發，格式會改變。完整格式見 [DESIGN.md 規格](/design-md/specification/)。
+Stitch 文件把 token 放在 front matter；DESIGN.md 儲存庫 `google-labs-code/design.md` 的 README 另外允許把 token 寫成 `yaml` 程式碼區塊，穿插在各個 `##` 章節裡。格式版本標為 `alpha`，還在積極開發，格式會改變。
 
 規格是基礎，不是硬性規定。它為顏色、字體排印、版面與元件提供共同的詞彙，讓 agent、工具和團隊有共同依據，同時保留依領域需求擴充的空間：未知的章節和自訂的 token 會被接受，不會被拒絕。
 
@@ -115,4 +115,4 @@ Glowing accents on deep brown, large food photos, quick to scan on a phone.
 - Do keep text contrast at 4.5:1 or higher
 ```
 
-Stitch 產生下一個畫面時讀的就是這樣一份文件。要檢查自己的 `DESIGN.md` 是否符合規格，見 [用 CLI 驗證 DESIGN.md](/design-md/cli/)。
+Stitch 產生下一個畫面時讀的就是這樣一份文件。

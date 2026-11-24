@@ -2,7 +2,7 @@
 title: CLI 內建 MCP 工具參考
 description: Stitch CLI 內建 MCP 伺服器的 7 個工具：用途、參數與回傳內容。
 appliesTo: Stitch CLI（2026-11-20）
-caveat: 這裡是 CLI 內建 MCP 伺服器（stitch mcp start）的 7 個工具，和遠端 Stitch MCP 服務的工具清單不同。
+caveat: CLI 內建 MCP 伺服器（stitch mcp start）和遠端 Stitch MCP 服務是兩個伺服器，工具清單不同。
 lastVerified: 2026-11-20
 sources:
   - title: Stitch Docs：MCP Tools
@@ -27,8 +27,6 @@ sources:
   }
 }
 ```
-
-安裝與各編輯器的設定方式見 [Agent Skills 與 MCP](/cli/mcp-and-skills/)。
 
 ## 工具總覽
 
@@ -157,7 +155,7 @@ sources:
 | 參數 | 型別 | 用途 |
 | --- | --- | --- |
 | `project` | `string` | Stitch 畫布專案 ID。產生畫面與變化版本時必填，除非設了 `newProject` |
-| `newProject` | `object` | 為生成的畫面建立新的畫布專案（說明寫可傳布林值或專案標題） |
+| `newProject` | `object` | 為生成的畫面建立新的畫布專案；型別標為 `object`，可傳布林值或專案標題 |
 | `title` | `string` | 選填的畫面或專案標題（產生畫面時） |
 | `prompt` | `string` | 產生畫面或變化版本的提示詞 |
 | `device`，別名 `deviceType` | `string` | 裝置類型：`MOBILE`、`DESKTOP`、`TABLET` 或 `AGNOSTIC` |

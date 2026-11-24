@@ -85,7 +85,7 @@ Stitch 本來就有一個讓 AI 代理直接連線的 MCP 伺服器。SDK 不另
 
 `stitchTools()`（從 `@google/stitch-sdk/ai` 匯入）把 SDK 接到 Vercel AI SDK。它讀同一份 `tools-manifest.json`，產生和 `generateText()`、`streamText()` 相容的 `Record<string, Tool>`。
 
-轉接器對 `ai` 套件**沒有執行期相依**。它用 `Symbol.for("vercel.ai.schema")` 重建工具 schema 的格式，符合 AI SDK 的內部協定，但不匯入 AI SDK 的任何程式碼。只用 domain API 的人，用到的 SDK 因此保持輕量。用法見[搭配 Vercel AI SDK](/sdk/ai-sdk/)。
+轉接器對 `ai` 套件**沒有執行期相依**。它用 `Symbol.for("vercel.ai.schema")` 重建工具 schema 的格式，符合 AI SDK 的內部協定，但不匯入 AI SDK 的任何程式碼。只用 domain API 的人，用到的 SDK 因此保持輕量。
 
 ## 錯誤處理
 
@@ -103,7 +103,7 @@ try {
 }
 ```
 
-Stitch 文件另寫上傳檔案的 `project.upload()` 從不丟出、失敗時回傳結果物件；已發布套件的型別宣告不同，見[上傳檔案](/sdk/upload-image/)。錯誤類別的屬性見 [SDK 參考](/sdk/reference/)。
+Stitch 文件另寫上傳檔案的 `project.upload()` 從不丟出、失敗時回傳結果物件；已發布套件的型別宣告則是回傳 [`Screen` 陣列](/sdk/upload-image/)。
 
 ## 和已發布套件的差異
 

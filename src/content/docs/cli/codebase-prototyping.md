@@ -61,8 +61,6 @@ stitch loop link --project <project-id>
 stitch upload design DESIGN.md
 ```
 
-擷取的旗標見[擷取執行中的 App](/cli/capture-and-upload/)。
-
 ## 查看 insight 與解決方案
 
 程式碼已上傳（`stitch upload code .`）、UI 原型 loop 也已啟用（`stitch create loop --template ui-prototyping`）後，Stitch 會在背景分析路由，找出只能看不能操作的資料顯示、流程瓶頸與版面上的機會。

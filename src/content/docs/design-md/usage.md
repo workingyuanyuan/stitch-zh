@@ -26,7 +26,7 @@ sources:
 
 ## 在面板裡編輯
 
-`Design System` 面板可以直接修改目前的設計系統。在這裡做的修改會同時更新結構化的 token 和 `DESIGN.md` 摘要。
+在 `Design System` 面板做的修改會同時更新結構化的 token 和 `DESIGN.md` 摘要。
 
 | 可編輯的屬性 | 內容 |
 | --- | --- |
@@ -34,13 +34,11 @@ sources:
 | 字體排印 | 標題、內文與標籤的字體家族 |
 | 圓角 | 各級圓角半徑 |
 
-更細的修改，例如元件準則、Do's and Don'ts 或 Overview 的敘述，要直接編輯 `DESIGN.md` 的 Markdown。章節的寫法見 [DESIGN.md 規格](/design-md/specification/)。
+更細的修改，例如元件準則、Do's and Don'ts 或 Overview 的敘述，要直接編輯 `DESIGN.md` 的 Markdown。
 
 ## 隨專案匯出
 
 匯出專案時，`DESIGN.md` 會和產生的畫面一起放在 zip 檔裡。開發者、其他設計工具或其他 agent 拿到這份檔案，就有一份可以帶到 Stitch 以外使用的設計系統紀錄。
-
-匯出的 `DESIGN.md` 是獨立的文件，離開 Stitch 也能使用。
 
 ## 在 Stitch 之外檢查
 

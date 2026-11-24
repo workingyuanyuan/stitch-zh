@@ -32,8 +32,6 @@ Stitch 文件沒有寫它對應哪一版 SDK。npm 上有兩個版本：
 | `0.3.5` | `latest`（`npm install @google/stitch-sdk` 預設安裝這版） | 2026-05-12 |
 | `0.4.0` | `next` | 2026-10-01 |
 
-各頁的程式碼依套件的型別宣告修正過，和 Stitch 文件不同的地方列在各頁最後的「和已發布套件的差異」。
-
 ## 需要準備
 
 | 項目 | 說明 |
@@ -134,9 +132,9 @@ SDK 的 API 是物件導向、可串接的：`stitch` → `Project` → `Screen`
 | `project.generate()` 回傳 | `Screen` | `Promise<Screen>` | `Promise<Generation<Screen, GenerateScreenFromTextResponse>>`，可當 `Screen` 用（`generation.d.ts` 第 13–19 行） |
 | `getHtml()`、`getImage()` | 回傳下載網址 | 回傳下載網址 | 仍回傳下載網址，但標為 deprecated；改用 `getHtmlUrl()`、`getImageUrl()`（網址）或 `readHtml()`、`readImage()`（內容）（`screen-ext.d.ts` 第 4–8、17–36 行） |
 
-## 接下來
+## 下一步
 
-| 想做的事 | 頁面 |
+| 想做的事 | 做法 |
 | --- | --- |
 | 用後續提示詞修改畫面 | [修改畫面](/sdk/edit-screen/) |
 | 探索其他版面與配色 | [產生變化版本](/sdk/generate-variants/) |

@@ -13,7 +13,7 @@ sources:
 
 ## 規則一覽
 
-`@google/design.md` linter 對解析後的 DESIGN.md 執行下列規則。每條規則的嚴重程度是固定的：`error`（結束碼 `1`）、`warning` 或 `info`。執行方式見 [用 CLI 驗證 DESIGN.md](/design-md/cli/)。
+`@google/design.md` linter 對解析後的 DESIGN.md 執行下列規則。每條規則的嚴重程度是固定的：`error`（結束碼 `1`）、`warning` 或 `info`。
 
 Stitch 文件列出 8 條規則；儲存庫 `google-labs-code/design.md` 的 README（commit `db977b3`）列出 11 條，多了 `unknown-key`、`token-like-ignored`、`omitted-rules`。
 

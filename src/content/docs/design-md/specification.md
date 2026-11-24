@@ -440,8 +440,6 @@ README 說 `Components` 章節可以在行內程式碼裡寫 `@<path>[#<fragment
 
 ### README 多列的未知內容處理
 
-除了上面「遇到未知內容時」表裡的情況，README 還列了這些：
-
 | 情況 | 處理方式 |
 | --- | --- |
 | 未知的 motion token 名稱 | 當作有效的 motion 接受 |

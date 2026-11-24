@@ -1,6 +1,6 @@
 ---
 title: 畫布操作與快捷鍵
-description: Stitch 畫布的選取、平移、縮放工具，以及編輯、檢視、切換畫面的快捷鍵一覽。
+description: Stitch 畫布用 V、H、Z 切換選取、平移與縮放工具，其他快捷鍵用來編輯、檢視與切換畫面。
 appliesTo: Stitch 網頁版（2026-11-20）
 caveat: 按一下 V、H、Z 是切換工具；按住 Space 或 Z 只在按住期間暫時切換，放開就回到原本的工具。
 lastVerified: 2026-11-20

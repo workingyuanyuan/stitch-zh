@@ -2,7 +2,7 @@
 title: 同步設計系統
 description: 把 DESIGN.md 綁到 Stitch Canvas 專案，讓產生與修改的畫面都依同一套規則。
 appliesTo: Stitch CLI（2026-11-20）
-caveat: 新畫面會自動用專案目前的設計系統；要把指定的設計系統套到畫布上的舊畫面，記載的做法是 stitch edit screen 加上 --design-system。
+caveat: 新畫面會自動用專案目前的設計系統；要把指定的設計系統套到畫布上的舊畫面，用 stitch edit screen 加上 --design-system。
 lastVerified: 2026-11-20
 sources:
   - title: Stitch Docs：Sync Design Systems

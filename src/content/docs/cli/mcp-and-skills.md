@@ -116,6 +116,4 @@ MCP client 用自己的設定檔時，讓它透過 `stdio` 執行 `stitch mcp st
 
 這個 MCP 伺服器提供七個格式一致的工具，命名比照 CLI 的指令結構：`stitch_find`、`stitch_get`、`stitch_create`、`stitch_edit`、`stitch_generate`、`stitch_delete`、`stitch_url`。
 
-各工具的參數見 [CLI 的 MCP 工具參考](/cli/reference/mcp-tools/)。
-
 另有一個在雲端執行的遠端 Stitch MCP 伺服器（`https://stitch.googleapis.com/mcp`），它的工具是 `create_project`、`generate_screen_from_text`、`edit_screens` 等，見 [MCP 設定](/mcp/setup/)與 [MCP 參考](/mcp/reference/)。

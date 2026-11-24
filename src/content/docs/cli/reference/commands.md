@@ -1,6 +1,6 @@
 ---
 title: CLI 指令參考
-description: Stitch CLI（@google/stitch）所有指令、旗標、環境變數與結束碼的查詢表。
+description: Stitch CLI（@google/stitch）的指令分成操作資源的動詞，以及畫布、擷取與設定指令。
 appliesTo: Stitch CLI（@google/stitch 0.13.0，2026-11-20）
 caveat: 標示 Workspace 的指令與資源要先在本機執行一次 stitch enable loop 才能使用；標示 Default 的不需要。
 lastVerified: 2026-11-20
@@ -114,7 +114,7 @@ README 0.13.0 寫：畫布指令（專案、畫面、設計系統）除了 OAuth
 export STITCH_API_KEY=your-api-key
 ```
 
-[CLI 快速入門](/cli/overview/) 的說法不同，見[差異表](#和已發布套件的差異)。
+Stitch 文件的 [CLI 快速入門](/cli/overview/)則寫，一次 `stitch login` 就同時驗證畫布專案與 Workspace 工作流程。
 
 ## 結束碼
 
@@ -127,7 +127,7 @@ export STITCH_API_KEY=your-api-key
 
 ## 資源與動詞對照
 
-資源指令的寫法是 `stitch <動詞> [resource] [id] [flags]`。下表列出每種資源能搭配哪些動詞（✓ 表示支援）。表中的資源名稱是單數；指令範例中也使用複數，例如 `stitch find projects`、`stitch generate variants`。
+資源指令的寫法是 `stitch <動詞> [resource] [id] [flags]`。✓ 表示該資源支援這個動詞。表中的資源名稱是單數；指令範例中也使用複數，例如 `stitch find projects`、`stitch generate variants`。
 
 | 資源 | 範圍 | 說明 | create | delete | edit | find | generate | get | open / url |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -149,7 +149,7 @@ export STITCH_API_KEY=your-api-key
 
 - `skill` 資源不同於 `stitch agent-skills`：後者是在本機寫入 `SKILL.md` 檔案。
 - GitHub 不用 `connection` 連結，而是用 `stitch github install`（README 0.13.0 的寫法不同，見[差異表](#和已發布套件的差異)）。
-- `priority`、`priorities` 是 loop 的舊名稱。README 0.13.0 寫明舊的資源名稱與 `--priority` 旗標仍然可用。
+- `priority`、`priorities` 是 loop 的舊名稱。在 0.13.0，舊的資源名稱與 `--priority` 旗標仍然可用。
 - 不是每種資源都支援每個動詞；`stitch <動詞> --schema` 會列出支援的資源。
 - `stitch download` 只支援 `screen`。
 
@@ -449,13 +449,13 @@ stitch config unset project
 stitch config set workspace <workspace-id>
 ```
 
-README 0.13.0 寫 `config list` 顯示從旗標、環境變數與設定檔解析出的值。
+`config list` 顯示的值從旗標、環境變數與設定檔解析而來。
 
 ### stitch enable 與 stitch disable
 
 在全域開啟或關閉實驗性功能。語法：`stitch enable [feature] [flags]`、`stitch disable [feature] [flags]`，兩者都有 `--dry-run`（預覽變更，不執行）。
 
-`loop` 功能開啟後，可以使用 `api`、`connect` 等 Workspace 指令，以及 workspace、loop 等資源。README 0.13.0 寫 Loop 預設關閉，它的指令、API、資源與旗標可能在版本之間改變，不一定會升主版本號。
+`loop` 功能開啟後，可以使用 `api`、`connect` 等 Workspace 指令，以及 workspace、loop 等資源。在 0.13.0，Loop 預設關閉，它的指令、API、資源與旗標可能在版本之間改變，不一定會升主版本號。
 
 ```shell
 stitch enable loop
@@ -475,7 +475,7 @@ stitch disable loop
 
 ### stitch login 與 stitch logout
 
-`stitch login` 以 Google OAuth 2.0 PKCE 驗證，或儲存一組永久 API key。唯一的指令旗標是 `--port`：本機回呼連接埠，預設 8085。README 0.13.0 補充：權杖存在本機並自動更新。
+`stitch login` 以 Google OAuth 2.0 PKCE 驗證，或儲存一組永久 API key。唯一的指令旗標是 `--port`：本機回呼連接埠，預設 8085。權杖存在本機並自動更新。
 
 `stitch logout` 登出，並移除本機的 OAuth 憑證與已儲存的 API key。
 
@@ -523,7 +523,7 @@ stitch disable loop
 
 ### stitch api（Workspace）
 
-直接對 Stitch 端點呼叫 REST API，或查看 OpenAPI／Discovery schema。語法：`stitch api [path] [flags]`。`path` 是端點路徑或 Discovery 方法 ID，例如 `/v2alpha/workspaces` 或 `workspaces.list`。端點清單見 [REST API 參考](/cli/reference/rest-api/)。
+直接對 Stitch 端點呼叫 REST API，或查看 OpenAPI／Discovery schema。語法：`stitch api [path] [flags]`。`path` 是端點路徑或 Discovery 方法 ID，例如 `/v2alpha/workspaces` 或 `workspaces.list`；可用的路徑是 [REST API 的端點](/cli/reference/rest-api/)。
 
 | 旗標 | 型別 | 用途 |
 | --- | --- | --- |
@@ -544,7 +544,7 @@ stitch api workspaces/<id>/loops --schema
 
 ### stitch mcp
 
-管理與啟動 CLI 內建的 Stitch MCP 伺服器。語法：`stitch mcp <subcommand> [flags]`。這個伺服器提供的工具見 [MCP 工具參考](/cli/reference/mcp-tools/)，設定步驟見 [Agent Skills 與 MCP](/cli/mcp-and-skills/)。
+管理與啟動 CLI 內建的 Stitch MCP 伺服器。語法：`stitch mcp <subcommand> [flags]`。這個伺服器有自己的 [7 個工具](/cli/reference/mcp-tools/)。
 
 | 子指令 | 用途 |
 | --- | --- |
@@ -619,7 +619,7 @@ stitch dismiss insights <insight-id>
 
 ## 和已發布套件的差異
 
-下表比較 Stitch 文件與 `@google/stitch` 0.13.0 的 README。0.13.0 於 2026-11-17 發布，是 2026-11-20 時 npm 的 `latest` 版本。
+`@google/stitch` 0.13.0 於 2026-11-17 發布，是 2026-11-20 時 npm 的 `latest` 版本。
 
 | 項目 | Stitch 文件 | README 0.13.0 |
 | --- | --- | --- |

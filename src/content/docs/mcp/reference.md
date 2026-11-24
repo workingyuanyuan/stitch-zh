@@ -1,6 +1,6 @@
 ---
 title: Stitch MCP 工具參考
-description: 遠端 Stitch MCP 服務的 14 個工具、參數、共用型別與列舉值查詢表。
+description: 遠端 Stitch MCP 服務有 14 個工具，管理專案、畫面與設計系統，並用 AI 產生與修改畫面。
 appliesTo: Stitch MCP（2026-11-20）
 caveat: 產生與修改畫面通常要幾分鐘；連線錯誤不一定代表失敗，應避免重試，過幾分鐘改用 get_screen 查看。generate_screen_from_text 每次呼叫都建立新畫面，重試可能產生重複畫面。
 lastVerified: 2026-11-20
@@ -13,7 +13,7 @@ sources:
 
 ## 這是哪一個伺服器
 
-這些是遠端 Stitch MCP 服務的工具，也就是 MCP 用戶端連到 `https://stitch.googleapis.com/mcp` 時可用的工具，連線方式見 [MCP 設定與驗證](/mcp/setup/)。Stitch CLI 內建的 MCP 伺服器另有自己的工具參考，見 [CLI 內建 MCP 伺服器的工具](/cli/reference/mcp-tools/)。
+這些是遠端 Stitch MCP 服務的工具，也就是 [MCP 用戶端](/mcp/setup/)連到 `https://stitch.googleapis.com/mcp` 時可用的工具。Stitch CLI 內建的 MCP 伺服器是另一個伺服器，有[自己的工具](/cli/reference/mcp-tools/)。
 
 ## 工具一覽
 

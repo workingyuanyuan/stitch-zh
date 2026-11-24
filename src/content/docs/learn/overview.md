@@ -57,8 +57,6 @@ Show this weekend's hike at the top, then three more upcoming hikes and a button
 | `⌘→` / `Ctrl+→` | 跳到下一個畫面 |
 | `?` | 顯示全部快捷鍵 |
 
-其他快捷鍵見[畫布操作與快捷鍵](/learn/controls/)。
-
 ## 一次改一件事
 
 設計產生後，挑一件想改的事，只挑一件。選取要修改的畫面，按 `Edit`，再按 `Add to Chat`，然後寫提示詞。提示詞要寫明改哪裡、怎麼改。
@@ -75,7 +73,7 @@ On the hike list, make the next upcoming hike stand out. Give its card a full-wi
 
 這段提示詞要 Stitch 突顯最近的一場活動：它的卡片用滿版照片和較大的標題，其他活動縮成下方的精簡列表。
 
-之後重複同一個步驟：選一個要調整的地方，用 UI/UX 用語寫出清楚指出要改哪個元件的提示詞，再產生。更多寫法見[提示詞寫法](/learn/prompting/)。
+之後重複同一個步驟：選一個要調整的地方，用 UI/UX 用語寫出清楚指出要改哪個元件的提示詞，再產生。
 
 ## 調整主題：Edit Theme
 
@@ -103,5 +101,3 @@ On the hike list, make the next upcoming hike stand out. Give its card a full-wi
 點選一個畫面，或拖曳框選多個畫面，按下載。瀏覽器會下載一個 zip 檔，裡面是設計的圖片與 HTML 程式碼。
 
 HTML 是轉換成其他格式的基礎。把 HTML 和參考圖交給 LLM，可以轉成 React、Angular、Vue 等元件，或 Jetpack Compose、Flutter、SwiftUI 等非網頁平台的程式碼。
-
-Stitch 文件裡說明各種元件格式怎麼產生的 Build 頁面（Code、Backend、Deploy），在 2026-11-20 內容只有「Coming soon」。

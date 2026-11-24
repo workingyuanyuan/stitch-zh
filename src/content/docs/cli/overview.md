@@ -65,8 +65,6 @@ stitch agent-skills add --user
 
 這段要求 agent 建立名為 Night Market Map 的專案，並產生一個依攤位排號列出小吃攤、上方有搜尋列的手機畫面。
 
-安裝位置與其他選項見 [Agent Skills 與 MCP](/cli/mcp-and-skills/)。
-
 ## 在終端機產生第一個畫面
 
 先建立 Stitch Canvas 專案，再把它固定到目前的資料夾。固定後，之後的指令不必每次加 `--project`。
@@ -96,7 +94,7 @@ stitch open project
 
 ## 下一步
 
-| 想做的事 | 頁面 |
+| 想做的事 | 做法 |
 | --- | --- |
 | 產生畫面、試變化版本、一次改一處 | [產生與修改畫面](/cli/screens-and-variants/) |
 | 上傳自己的圖、在第一個提示詞明確設定構圖、在 `localhost` 加上互動 | [和 coding agent 反覆修改](/cli/agent-bridge/) |
@@ -112,9 +110,7 @@ stitch open project
 stitch enable loop
 ```
 
-接著看這幾頁：
-
-| 頁面 | 內容 |
+| 主題 | 內容 |
 | --- | --- |
 | [連接儲存庫](/cli/workspaces-and-projects/) | 把程式碼庫配對到 Stitch Workspace，並連結 Canvas 專案 |
 | [Loop 與背景資料](/cli/priorities-and-context/) | 設定長期的 UI 原型目標，附上產品規格 |

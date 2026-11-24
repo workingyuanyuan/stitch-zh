@@ -76,8 +76,6 @@ const ds = await project.createDesignSystemFromDesignMd(
 );
 ```
 
-完整步驟，包括套用結果與不經過這兩個方法的 `callTool` 寫法，見[從 DESIGN.md 建立設計系統](/sdk/design-md/)。
-
 ## 更新
 
 ```ts
