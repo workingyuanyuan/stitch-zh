@@ -42,6 +42,15 @@ const current = sectionOf(pageId(entry.id));
 		text-decoration: none;
 		white-space: nowrap;
 	}
+	/* A disc in the aurora colours of the home page's prompt ring before the name. */
+	.site-title::before {
+		content: '';
+		flex: none;
+		width: 0.6em;
+		height: 0.6em;
+		border-radius: 50%;
+		background: conic-gradient(from 200deg, #9154e7, #6056f0, #40d9c6, #4285f4, #9154e7);
+	}
 	.pill {
 		border: 1px solid currentColor;
 		border-radius: 999px;
