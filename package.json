@@ -11,7 +11,7 @@
     "upstream": "node scripts/upstream.mjs",
     "upstream:html": "node scripts/upstream-html.mjs",
     "lint": "node scripts/lint-content.mjs",
-    "verify": "astro build && node scripts/check-dist.mjs"
+    "verify": "node scripts/check-agents.mjs && astro build && node scripts/check-dist.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "0.4.10",
