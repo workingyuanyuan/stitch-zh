@@ -11,7 +11,7 @@ sources:
 
 ## 三個步驟
 
-跟 agent 要一個通用的 App 範本，結果通常平淡。效果好的做法是三步：
+跟 agent 要一個通用的 App 範本，結果通常平淡；先給視覺基準、再設定構圖，效果較好：
 
 | 步驟 | 做法 | 指令 |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ stitch upload screen ./keelung-harbor.png \
 
 一次要求整個 App 時，模型很愛把每個角落塞滿狀態圓點、膠囊徽章和假的導覽列。提示詞要寫明畫布上該有什麼，其他一律不要。
 
-一個構圖聚焦的提示詞包含四個部分：畫布、原則、圖、內容。下面的例子從圖和內容寫起，最後才寫限制：
+一個構圖聚焦的提示詞包含四個部分：畫布、原則、圖、內容。寫法上先寫圖和內容，最後才寫限制：
 
 ```text
 A product card for Alishan High Mountain Oolong, ivory (#FBF8F2) with dark ink text (#1E1B18) in Noto Serif TC, uses the uploaded tea terrace painting as a square tin label on its left half.

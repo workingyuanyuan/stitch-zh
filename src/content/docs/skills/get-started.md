@@ -36,7 +36,7 @@ npx plugins add google-labs-code/stitch-skills --scope project --target gemini-c
 
 這會安裝三個外掛：`stitch-design`、`stitch-build`、`stitch-utilities`，合計 13 個 [Skill](/skills/reference/)。
 
-`plugins` CLI 目前還不支援把 Antigravity 當成 `--target`。用 Antigravity 時，改用下一節的個別安裝指令。
+`plugins` CLI 目前還不支援把 Antigravity 當成 `--target`。用 Antigravity 時，用 `npx skills add google-labs-code/stitch-skills` 逐一勾選 Skill。
 
 ### 只裝部分 Skill（選用）
 
@@ -95,7 +95,7 @@ Now take the improved version you just wrote and turn it into a Stitch screen.
 
 產生需要 15 到 30 秒。完成後會顯示畫面 ID 和檔案路徑。打開產生的截圖，就能看到一個完整的到達頁，包含主視覺區塊、功能卡片、導覽列與頁尾。
 
-## 下一步
+## 其他 Skill 工作
 
 | 想做的事 | 做法 |
 | --- | --- |

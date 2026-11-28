@@ -29,7 +29,7 @@ pnpm verify              # build, then run the acceptance checks. Run this befor
 pnpm upstream            # compare the official docs with what the pages were written from (upstream/README.md)
 pnpm upstream:html       # save the text of the official rendered pages in cache/upstream-html/, for reading
 pnpm lint [dir ...]      # check content pages without building (frontmatter, links, fences, wording)
-node scripts/prose-review.mjs run      # after a build: a reader of another model reads the prose units not yet in the ledger
+node scripts/prose-review.mjs run      # after a build: a reader (PROSE_READER) reads the prose units not yet in the ledger
 node scripts/prose-review.mjs status   # after a build: count the prose units the ledger lacks (pnpm verify fails on any)
 pnpm preview             # serve dist/ at http://127.0.0.1:4401/stitch-zh/ with GitHub Pages style headers
 ```

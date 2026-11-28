@@ -1,6 +1,6 @@
 ---
 title: CLI 內建 MCP 工具參考
-description: Stitch CLI 內建 MCP 伺服器的 7 個工具：用途、參數與回傳內容。
+description: Stitch CLI 內建的 MCP 伺服器有 7 個工具，對應 CLI 的 create、get、edit 等動詞指令。
 appliesTo: Stitch CLI（2026-11-20）
 caveat: CLI 內建 MCP 伺服器（stitch mcp start）和遠端 Stitch MCP 服務是兩個伺服器，工具清單不同。
 lastVerified: 2026-11-20

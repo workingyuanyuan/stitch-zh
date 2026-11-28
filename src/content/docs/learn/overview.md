@@ -59,7 +59,7 @@ Show this weekend's hike at the top, then three more upcoming hikes and a button
 
 ## 一次改一件事
 
-設計產生後，挑一件想改的事，只挑一件。選取要修改的畫面，按 `Edit`，再按 `Add to Chat`，然後寫提示詞。提示詞要寫明改哪裡、怎麼改。
+設計產生後，選取要修改的畫面，按 `Edit`，再按 `Add to Chat`，然後寫提示詞。提示詞要寫明改哪裡、怎麼改。
 
 ```text
 On the hike list, make the next upcoming hike stand out. Give its card a full-width photo and a larger title, and show the other hikes as compact rows below it.

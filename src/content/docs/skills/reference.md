@@ -29,7 +29,7 @@ sources:
 | `stitch-utilities` | `stitch-loop` | 用接力棒模式自動產生多頁網站 |
 | `stitch-utilities` | `taste-design` | 產生避開 AI 常見樣式的高標準 `DESIGN.md` |
 
-以下各節的提示詞都是對 coding agent 說的話。
+Skill 由 coding agent 執行，提示詞寫給 coding agent。
 
 ## stitch-design
 
@@ -207,4 +207,4 @@ npx skills add google-labs-code/stitch-skills \
 | 匯入現有程式碼 | 完整的遷移流程 |
 | 產生程式碼 | 從 Stitch 轉成 React |
 
-很多 Skill 彼此依賴。選擇性安裝前，先對照上面各 Skill 列出的依賴。
+選擇性安裝時，要連同依賴的 Skill 一起安裝。

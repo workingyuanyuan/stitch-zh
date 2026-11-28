@@ -51,7 +51,7 @@ stitch api -X POST workspaces/{workspace}/goals/suggest
 ## 路徑參數、查詢參數與方法 ID
 
 - 路徑中的 `{workspace}`、`{goal}` 等段落是路徑參數，換成實際 ID。在參數表裡它們叫 `name`、`parent` 或 `user`，值是資源名稱，例如 `workspaces/{workspace}`；資源名稱不含 `:addRepository` 這類方法後綴，所以不一定等於完整路徑。
-- 「查詢參數」一欄只列路徑以外的參數；「—」表示沒有列出查詢參數。
+- 「查詢參數」欄的「—」表示該端點沒有路徑以外的查詢參數。
 - `filter` 多數是 AIP-160 運算式；`organizations`、`workspaces`、`users` 的列表用 CEL 運算式。
 - `pageSize` 與 `pageToken` 用來分頁：`pageToken` 填上一次回應給的權杖。
 - `updateMask` 指定要更新的欄位。

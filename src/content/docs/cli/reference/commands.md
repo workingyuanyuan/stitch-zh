@@ -84,7 +84,7 @@ npm install -g @google/stitch
 | `--trace` | `boolean` | 把原始 HTTP 追蹤與可重現的 cURL 指令輸出到 stderr |
 | `--workspace`、`-w` | `string` | Workspace ID（用 `stitch find workspaces` 列出；環境變數 `STITCH_WORKSPACE`） |
 
-README 0.13.0 的全域旗標表還列了 `--dry-run`：在會修改資料的指令上驗證並預覽，不呼叫後端。
+`--dry-run` 在會修改資料的指令上驗證並預覽，不呼叫後端；這個全域旗標只見於 README 0.13.0。
 
 `--schema` 可以只看一種資源，例如：
 
@@ -184,7 +184,7 @@ stitch create connection --workspace <workspace-id> --provider slack
 stitch create project --json '{"title":"Customer Dashboard Redesign"}'
 ```
 
-最後一行是 README 0.13.0 的例子：用 `--json` 傳入原始內容，而不是用旗標。
+`stitch create project` 也可以不用旗標，改用 `--json` 傳入原始內容；這個寫法只見於 README 0.13.0。
 
 要從 `DESIGN.md` 檔案建立設計系統，改用 `stitch upload design`。
 
@@ -224,7 +224,7 @@ stitch delete context <context-id> --workspace <workspace-id> --force
 | `--prompt` | `string` | 描述畫面修改方向與風格的提示詞 |
 | `--remove-repo` | `string` | 從 Workspace 移除儲存庫（網址、`owner/repo` 簡寫或 ID） |
 
-README 0.13.0 另列 `--json '{...}'`：傳入原始的 patch 內容，例如修改 `design-system` 時。
+`--json '{...}'` 傳入原始的 patch 內容，例如修改 `design-system` 時；這個寫法只見於 README 0.13.0。
 
 ```shell
 stitch edit screen <screen-id> --project <project-id> --prompt "Shrink the header and keep the order button visible"
@@ -535,7 +535,7 @@ stitch disable loop
 
 注意這個指令的預覽旗標是 `--dryRun`；其他有預覽旗標的指令用的是 `--dry-run`。
 
-README 0.13.0 的範例（旗標與路徑的差異見[差異表](#和已發布套件的差異)）：
+README 0.13.0 的 `stitch api` 旗標與路徑和 Stitch 文件不同（[差異表](#和已發布套件的差異)）：
 
 ```shell
 stitch api workspaces
@@ -606,7 +606,7 @@ stitch feedback --description "Loving the CLI tool" --sentiment positive
 
 ### stitch dismiss（README 0.13.0）
 
-README 0.13.0 的 Loop 段落列出這個指令：`stitch dismiss insights <id>` 把 insight 從推薦中隱藏。
+`stitch dismiss insights <id>` 把 insight 從推薦中隱藏。
 
 | 旗標 | 用途 |
 | --- | --- |

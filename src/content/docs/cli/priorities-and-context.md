@@ -33,8 +33,6 @@ CLI 內建範本，一步建立 loop 並調整 Workspace 的遠端分析 Skill�
 stitch create loop --template ui-prototyping
 ```
 
-這個指令同時做兩件事：
-
 | 動作 | 內容 |
 | --- | --- |
 | 建立長期 loop | 自主程度設為 `CREATE_SUGGESTIONS`，Stitch 會持續提出 insight、解決方案規格與 Canvas 設計提示詞 |

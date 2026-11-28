@@ -1,8 +1,8 @@
 ---
 title: SDK 參考
-description: Stitch SDK 的類別、方法、設定欄位、錯誤、列舉與環境變數一覽。
+description: Stitch SDK 有五個類別，加上預設的單例 stitch。
 appliesTo: Stitch SDK（@google/stitch-sdk 0.3.5 與 0.4.0，2026-11-20）
-caveat: Stitch 文件沒寫 SDK 版本；對照 npm 的 0.3.5（latest）與 0.4.0（next），部分方法、選項名稱與回傳型別不同，見文末差異表。
+caveat: npm 上的 0.3.5（latest）與 0.4.0（next）部分方法、選項名稱與回傳型別不同，Stitch 文件與兩版也不完全一致。
 lastVerified: 2026-11-20
 sources:
   - title: Stitch Docs：Reference（SDK）
@@ -59,7 +59,7 @@ sources:
 npm install @google/stitch-sdk
 ```
 
-Stitch 文件沒有寫它對應哪一版 SDK。npm 上有兩版：`0.3.5`（`latest`，2026-05-12 發布，預設安裝這版）與 `0.4.0`（`next`，2026-10-01 發布，用 `npm install @google/stitch-sdk@next` 安裝）。
+npm 上有兩版：`0.3.5`（`latest`，2026-05-12 發布，預設安裝這版）與 `0.4.0`（`next`，2026-10-01 發布，用 `npm install @google/stitch-sdk@next` 安裝）。
 
 主套件 `@google/stitch-sdk` 的匯出：
 
@@ -163,7 +163,7 @@ const s = new Stitch(client);
 | `generate(prompt, deviceType?, modelId?)` | `prompt: string`、`deviceType?: DeviceType`、`modelId?: ModelId` | `Promise<Screen>` | 用文字提示詞產生新畫面，對應 `generate_screen_from_text` |
 | `screens()` | — | `Promise<Screen[]>` | 列出專案裡的所有畫面，對應 `list_screens` |
 | `getScreen(screenId)` | `screenId: string` | `Promise<Screen>` | 用 ID 取得一個畫面，對應 `get_screen` |
-| `upload(filePath, opts?)` | `filePath: string`、`opts?: { title?: string, createScreenInstances?: boolean }` | 兩版套件：`Promise<Screen[]>`（Stitch 文件寫 `Promise<UploadResult>`） | 上傳檔案（`.png`、`.jpg`、`.jpeg`、`.webp`、`.html`、`.htm`）並建立畫面；直接送到 REST API。Stitch 文件說它從不丟出例外，套件的宣告沒有這樣寫，見[上傳檔案](/sdk/upload-image/) |
+| `upload(filePath, opts?)` | `filePath: string`、`opts?: { title?: string, createScreenInstances?: boolean }` | 兩版套件：`Promise<Screen[]>`（Stitch 文件寫 `Promise<UploadResult>`） | 上傳檔案（`.png`、`.jpg`、`.jpeg`、`.webp`、`.html`、`.htm`）並建立畫面；直接送到 REST API。失敗時是否丟出例外，Stitch 文件與套件宣告不一致（[上傳檔案](/sdk/upload-image/)） |
 | `createDesignSystem(ds)` | `ds: { displayName: string }` | `Promise<DesignSystem>` | 為這個專案建立設計系統 |
 | `listDesignSystems()` | — | `Promise<DesignSystem[]>` | 列出專案裡的所有設計系統 |
 | `designSystem(id)` | `id: string` | `DesignSystem` | 用 asset ID 建立 `DesignSystem` handle，不呼叫 API |
@@ -281,7 +281,7 @@ import { stitchTools } from "@google/stitch-sdk/ai";
 
 ### `VariantOptions`
 
-這個型別在 Stitch 文件的參考頁沒有展開；欄位依兩版套件的 `types.generated.d.ts`：
+`VariantOptions` 的欄位（兩版套件的 `types.generated.d.ts`）：
 
 | 欄位 | 型別 | 內容 |
 | --- | --- | --- |
@@ -317,7 +317,7 @@ import { stitchTools } from "@google/stitch-sdk/ai";
 | `DesignSystem` 屬性 | `id`、`data` | 另有 `projectId`、`assetId`（`id` 是 `assetId` 的別名） | 同 0.3.5，另有 `title` |
 | 數量選項 | `numVariants`（教學頁） | `variantCount` | `variantCount` |
 | `ModelId` 的值 | 3 個 | 另有 `GEMINI_3_1_PRO` | 另有 `GEMINI_3_8_FLASH`、`GEMINI_3_5_FLASH_LITE`、`GEMINI_3_1_PRO` |
-| `StitchConfigInput` | `apiKey`、`accessToken`、`projectId`、`baseUrl` | 另有 `timeout`（README：預設 `300000` 毫秒） | 另有 `timeout`、`entityCache`、`retry` |
+| `StitchConfigInput` | `apiKey`、`accessToken`、`projectId`、`baseUrl` | 另有 `timeout`（預設 `300000` 毫秒） | 另有 `timeout`、`entityCache`、`retry` |
 | `listTools()` 回傳 | `Promise<{ tools: ToolDefinition[] }>` | `Promise<{ tools: any[] }>` | 回傳各工具的 `name`、`description`、`inputSchema` 等欄位 |
 | `close()` 之後 | 沒有說明 | 型別宣告沒有說明 | 不能再用，之後的呼叫丟出 `CLIENT_CLOSED`（`client.d.ts`） |
 | `stitchTools({ include })` 有不存在的名稱 | 沒有說明 | 型別宣告沒有說明 | 丟出錯誤（`tools-adapter.d.ts` 第 26 行） |

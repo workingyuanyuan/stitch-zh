@@ -26,8 +26,6 @@ sources:
 
 ## Design token
 
-design token 以 YAML front matter 的形式放在檔案開頭。
-
 | 規則 | 內容 |
 | --- | --- |
 | 開頭 | 一行只有 `---` |
@@ -381,7 +379,7 @@ components:
 
 ## 儲存庫 README 的寫法
 
-DESIGN.md 的開放原始碼儲存庫 `google-labs-code/design.md` 在 README 裡附了一份精簡版規格（完整版在儲存庫的 `docs/spec.md`）。README 寫明格式版本是 `alpha`，規格、token schema 和 CLI 都還在積極開發，格式會隨之改變。
+DESIGN.md 的開放原始碼儲存庫 `google-labs-code/design.md` 在 README 裡附了一份精簡版規格（完整版在儲存庫的 `docs/spec.md`）。格式版本是 `alpha`，規格、token schema 和 CLI 都還在積極開發，格式會隨之改變。
 
 ### 和 Stitch 文件不同的地方
 
@@ -429,7 +427,7 @@ components:
 
 ### 外部參照
 
-README 說 `Components` 章節可以在行內程式碼裡寫 `@<path>[#<fragment>]`，指向元件的進一步說明，例如 HTML 元件範本或 JSX 原始碼：
+`Components` 章節可以在行內程式碼裡寫 `@<path>[#<fragment>]`，指向元件的進一步說明，例如 HTML 元件範本或 JSX 原始碼：
 
 ```markdown
 ## Components

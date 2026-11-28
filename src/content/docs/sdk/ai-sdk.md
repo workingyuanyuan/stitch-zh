@@ -86,7 +86,7 @@ const tools = stitchTools({ apiKey: "your-key-here" });
 
 ## 和已發布套件的差異
 
-上面的程式碼在兩版都能執行；`stitchTools(options?)` 的兩個選項 `apiKey`、`include` 在兩版相同。
+這些用法在 0.3.5 與 0.4.0 都能執行；`stitchTools(options?)` 的兩個選項 `apiKey`、`include` 在兩版相同。
 
 | 項目 | Stitch 文件 | 0.3.5（latest） | 0.4.0（next） |
 | --- | --- | --- | --- |

@@ -19,7 +19,7 @@
 // Header and page text: the header links the first page of each section (SECTIONS, the
 //     section tabs of the sidebar) in order; the page notes link the Markdown twin, llms.txt
 //     and index.json; no text in <main> is about the site or the page; the body does not open
-//     with a paragraph after the answer line (scripts/check-page-text.mjs).
+//     with a paragraph after the answer line; every footnote links a listed source (scripts/check-page-text.mjs).
 // Prose ledger: every unit of the site's own prose has been read against
 //     scripts/prose-rubric.md and is recorded in reviews/prose-ledger.json (scripts/prose-review.mjs).
 // Being found: title, description, canonical, hreflang and sitemap (scripts/check-found.mjs).
@@ -34,7 +34,7 @@ import { SITE, LOCALES, LLMS_NOTES, SECTIONS, sectionPages, localeOf, htmlPath, 
 import { bundlePath } from '../src/lib/llms.mjs';
 import { readPages } from '../src/lib/content-index.mjs';
 import { checkFound } from './check-found.mjs';
-import { checkHeaderAndOutputs, checkSelfReference, checkOpening } from './check-page-text.mjs';
+import { checkHeaderAndOutputs, checkSelfReference, checkOpening, checkFootnotes } from './check-page-text.mjs';
 import { checkProse } from './prose-review.mjs';
 
 const DIST = fileURLToPath(new URL('../dist/', import.meta.url));
@@ -209,10 +209,12 @@ for (const { id, data } of pages) {
 	});
 	checkSelfReference(doc, id, fail);
 	checkOpening(doc, id, fail);
+	checkFootnotes(doc, id, fail, (data.sources || []).map((s) => s.url.replace(/\/$/, '')));
 
 	// 5. No decoration leak into extracted text.
 	const visible = normalize(doc.body.textContent);
 	for (const [name, pattern] of [
+		['footnote back-link glyph', /↩/],
 		// Add a pattern here for every piece of text the skin draws with CSS `content`.
 		['list or table marker drawn by the skin', /[◆▶■█▮]\s/],
 		['prompt label drawn by the skin', /\bPROMPT\b/],

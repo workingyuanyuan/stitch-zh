@@ -56,7 +56,7 @@ Whatever the README describes first is the most important feature, so size and p
 | 視覺識別 | 顏色、字體、間距、元件模式 | 樣式表、主題檔、Tailwind 設定 |
 | 資訊架構 | 產品資料的自然形狀，決定頁面怎麼組織 | 核心邏輯與資料結構 |
 
-它是從程式碼往回推，而不是從範本往前套。產出的 `DESIGN.md` 放到 `.stitch/DESIGN.md`，就能直接用來產生畫面。
+產出的 `DESIGN.md` 放到 `.stitch/DESIGN.md`，就能直接用來產生畫面。
 
 ### 讓結果更好的寫法
 

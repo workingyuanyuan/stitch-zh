@@ -6,7 +6,7 @@ import starlightLinksValidator from 'starlight-links-validator';
 import { sitemapOptions } from './src/lib/sitemap.mjs';
 import { ORIGIN, BASE, TITLE, DESCRIPTION, SECTIONS } from './src/lib/site.mjs';
 import { satteri } from '@astrojs/markdown-satteri';
-import { hastBase } from './src/lib/hast-base.mjs';
+import { hastBase, hastFootnotes } from './src/lib/hast-base.mjs';
 
 export default defineConfig({
 	site: ORIGIN,
@@ -15,7 +15,7 @@ export default defineConfig({
 	// Content links are written without the sub-path; this adds it in the HTML.
 	// No typographic substitution: names such as `Do's and Don'ts` and flags written in
 	// prose must reach the page as typed.
-	markdown: { smartypants: false, processor: satteri({ hastPlugins: [hastBase] }) },
+	markdown: { smartypants: false, processor: satteri({ hastPlugins: [hastBase, hastFootnotes] }) },
 	integrations: [
 		// Added here so that it takes options; Starlight then leaves its own copy out.
 		sitemap(sitemapOptions()),

@@ -3,7 +3,7 @@
 //
 // Rules about page text that need judgment (text about the page or the site, a sentence that
 // restates another, prose that names its source as the speaker) have no fixed wording, so a
-// pattern catches only the phrasings already seen. A reader of another model reads each unit of
+// pattern catches only the phrasings already seen. A reader reads each unit of
 // the site's own prose once; the units it passes are recorded, hashed, in reviews/prose-ledger.json.
 // `pnpm verify` fails for a unit that is not in the ledger, so new or changed wording cannot go
 // live unread. The deploy needs no model: it only compares hashes.
@@ -21,14 +21,12 @@
 //   node scripts/prose-review.mjs accept <hash> <reason>       record a unit the reader flagged wrongly
 //
 // `run` prints each flagged unit with its page and the rule; fix the page, build, and run again.
-// The reader is `codex exec` with gpt-6.2-sol unless PROSE_READER names another command, which
-// gets the prompt on stdin and prints its answer on stdout. Pick a model other than the writer's;
-// for Gemini through agy (prompt as an argument, its stdin closed):
-//   PROSE_READER='agy --model gemini-4-neon-medium --dangerously-skip-permissions --print-timeout 20m -p "$(cat)" </dev/null'
+// The reader is the shell command in PROSE_READER: it gets the prompt on stdin and prints its
+// answer on stdout. Which model reads is the choice of the agent that runs it. A batch whose reader
+// fails (a quota, a timeout) stays unread; run again later and only the unread units are read.
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync, mkdtempSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { tmpdir } from 'node:os';
 import { spawn } from 'node:child_process';
 import { Worker, isMainThread, parentPort, workerData } from 'node:worker_threads';
 import { availableParallelism } from 'node:os';
@@ -229,21 +227,14 @@ export async function checkProse(fail, dist = DIST) {
 
 function readerCommand(prompt) {
 	return new Promise((resolve, reject) => {
-		const custom = process.env.PROSE_READER;
-		const dir = mkdtempSync(join(tmpdir(), 'prose-'));
-		const out = join(dir, 'out.md');
-		const child = custom
-			? spawn(custom, { shell: true, cwd: ROOT, stdio: ['pipe', 'pipe', 'pipe'] })
-			: spawn('codex', ['exec', '-m', 'gpt-6.2-sol', '-c', 'model_reasoning_effort="medium"', '-s', 'read-only', '-o', out, '-'], { cwd: ROOT, stdio: ['pipe', 'pipe', 'pipe'] });
+		const child = spawn(process.env.PROSE_READER, { shell: true, cwd: ROOT, stdio: ['pipe', 'pipe', 'pipe'] });
 		let stdout = '';
 		let stderr = '';
 		child.stdout.on('data', (d) => (stdout += d));
 		child.stderr.on('data', (d) => (stderr = (stderr + d).slice(-400)));
 		child.on('error', reject);
 		child.on('close', (code) => {
-			const text = !custom && existsSync(out) ? readFileSync(out, 'utf8') : stdout;
-			rmSync(dir, { recursive: true, force: true });
-			code === 0 && text.trim() ? resolve(text) : reject(new Error(`reader exited ${code}: ${squash(stderr).slice(-200)}`));
+			code === 0 && stdout.trim() ? resolve(stdout) : reject(new Error(`reader exited ${code}: ${squash(stderr).slice(-200)}`));
 		});
 		child.stdin.end(prompt);
 	});
@@ -258,6 +249,10 @@ function parseAnswer(text, count) {
 }
 
 async function run(args) {
+	if (!process.env.PROSE_READER) {
+		console.error('PROSE_READER is not set: a shell command that gets the prompt on stdin and prints the answer on stdout.');
+		process.exit(2);
+	}
 	const jobs = Number(args[args.indexOf('--jobs') + 1]) || 4;
 	const limit = args.includes('--limit') ? Number(args[args.indexOf('--limit') + 1]) : Infinity;
 	const { rubric, ledger, known } = loadLedger();

@@ -92,7 +92,7 @@ stitch serve
 stitch open project
 ```
 
-## 下一步
+## 其他 CLI 工作
 
 | 想做的事 | 做法 |
 | --- | --- |

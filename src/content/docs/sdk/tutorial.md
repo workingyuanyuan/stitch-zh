@@ -2,7 +2,7 @@
 title: SDK 快速上手
 description: Stitch SDK（@google/stitch-sdk）讓你用 TypeScript 產生、修改與管理 UI 設計。
 appliesTo: Stitch SDK（@google/stitch-sdk 0.3.5 與 0.4.0，2026-11-20）
-caveat: Stitch 文件沒有寫 SDK 版本；npm 上 latest 是 0.3.5、next 是 0.4.0，兩版的 API 有差異。
+caveat: npm 上 latest 是 0.3.5、next 是 0.4.0，兩版的 API 有差異。
 lastVerified: 2026-11-20
 sources:
   - title: Stitch Docs：Build your first design
@@ -113,7 +113,7 @@ Image: https://...
 
 用瀏覽器開啟 HTML 網址，會看到已經套好樣式的登入頁，Tailwind CSS 直接寫在 HTML 裡。
 
-## 剛才用到的三個概念
+## SDK 的三個概念
 
 | 概念 | 作用 |
 | --- | --- |
@@ -132,7 +132,7 @@ SDK 的 API 是物件導向、可串接的：`stitch` → `Project` → `Screen`
 | `project.generate()` 回傳 | `Screen` | `Promise<Screen>` | `Promise<Generation<Screen, GenerateScreenFromTextResponse>>`，可當 `Screen` 用（`generation.d.ts` 第 13–19 行） |
 | `getHtml()`、`getImage()` | 回傳下載網址 | 回傳下載網址 | 仍回傳下載網址，但標為 deprecated；改用 `getHtmlUrl()`、`getImageUrl()`（網址）或 `readHtml()`、`readImage()`（內容）（`screen-ext.d.ts` 第 4–8、17–36 行） |
 
-## 下一步
+## 其他 SDK 工作
 
 | 想做的事 | 做法 |
 | --- | --- |

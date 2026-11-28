@@ -68,7 +68,7 @@ const screens = await project.upload("./prototype.html", {
 
 ## 處理失敗
 
-套件 README 寫明，所有 domain 類別的方法失敗時都丟出 `StitchError`，所以用 `try`／`catch` 接住：
+所有 domain 類別的方法失敗時都丟出 `StitchError`，用 `try`／`catch` 接住：
 
 ```ts
 import { StitchError } from "@google/stitch-sdk";
@@ -85,7 +85,7 @@ try {
 
 ### 上傳錯誤碼
 
-Stitch 文件列出下面五個錯誤碼。套件把同樣五個值定義成 `UploadErrorCode` 型別，屬於內部上傳處理器回傳的 `UploadResult`；`project.upload()` 的型別宣告不包含它們。
+上傳錯誤碼共五個。套件把同樣五個值定義成 `UploadErrorCode` 型別，屬於內部上傳處理器回傳的 `UploadResult`；`project.upload()` 的型別宣告不包含它們。
 
 | 錯誤碼 | 意思 |
 | --- | --- |

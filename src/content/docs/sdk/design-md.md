@@ -141,7 +141,7 @@ const ds = await stitch.callTool("create_design_system_from_design_md", {
 | `ds.apply()` 回傳 | `Screen` 陣列 | `Promise<Screen[]>` | `Promise<Generation<Screen, ApplyDesignSystemResponse>>` |
 | `callTool()` | `callTool(name, params)` | `callTool<T>(name: string, args: Record<string, any>)`（`client.d.ts` 第 34 行） | 同 0.3.5 |
 
-## 下一步
+## 撰寫與套用設計系統
 
 - [DESIGN.md 規格](/design-md/specification/)：自己撰寫 `DESIGN.md` 的完整格式
 - [管理設計系統](/sdk/design-systems/)：建立、更新、列出、套用設計系統

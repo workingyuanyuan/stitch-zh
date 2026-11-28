@@ -25,7 +25,7 @@ sources:
 
 ## 有了它會怎樣
 
-Stitch 這類 design agent 讀了 `DESIGN.md` 之後，產生的每個畫面都照同一套視覺規則：同樣的配色、字體排印與元件樣式。沒有它，每個畫面各自獨立；有了它，畫面看起來屬於同一個產品。
+Stitch 這類 design agent 讀了 `DESIGN.md` 之後，產生的每個畫面都照同一套視覺規則：同樣的配色、字體排印與元件樣式。沒有 `DESIGN.md` 時，每個畫面的配色與字體各自決定。
 
 `DESIGN.md` 會跟著設計一起演變，不是寫好就不動的設定檔。常見的循環是：agent 產生它，你修改它，修改後的版本再套用到之後反覆調整的畫面上。
 
@@ -62,7 +62,7 @@ Calm and trustworthy, like a good neighborhood clinic. That is the feeling for a
 
 ### 手寫
 
-每個章節都只是 Markdown，design token 放在選用的 YAML front matter 裡。除了標準 Markdown 與 YAML，沒有其他特殊語法。
+每個章節都只是 Markdown，design token 放在選用的 YAML front matter 裡。
 
 ## 範例
 

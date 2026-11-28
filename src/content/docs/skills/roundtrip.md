@@ -112,7 +112,7 @@ Pull the latest screens from my Stitch project and rebuild this app's pages from
 
 啟動 dev server，React 元件就會反映在 Stitch 裡做的修改，包括新加的地圖卡片。
 
-## 下一步
+## 其他 Skill 工作
 
 | 想做的事 | 做法 |
 | --- | --- |

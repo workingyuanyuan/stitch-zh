@@ -138,7 +138,7 @@ console.log("Design system applied to all screens");
 
 ## 和已發布套件的差異
 
-除了從 `DESIGN.md` 建立的兩個方法，上面的程式碼在兩版都能執行。
+除了從 `DESIGN.md` 建立的兩個方法，這些用法在 0.3.5 與 0.4.0 都能執行。
 
 | 項目 | Stitch 文件 | 0.3.5（latest） | 0.4.0（next） |
 | --- | --- | --- | --- |
